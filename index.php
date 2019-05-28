@@ -28,29 +28,11 @@
         <h2><?php echo"PHP Fundamentals Training"; ?></h2>
     </section>
     <section class="maincontent">
-    1. String
-    2. Interger
-    3. Float
-    4. Boolean
-    5. Array
-    6. Object
-    7. NULL
-    8. Besource
-    <br/>
-    <br/>
-    6. Object
-    <br/>
+    
+    
         <?php
-            class student{
-                function department(){
-                    return "Physics";
-                }
-                function details(){
-                    echo $this->department();
-                }
-            }
-            $st = new student;
-            $st->details();
+           $x = "PHP string";
+           echo strlen($x);
         ?>
     </section>
     <section class="footeroption">
