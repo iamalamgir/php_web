@@ -38,11 +38,19 @@
     8. Besource
     <br/>
     <br/>
-    7. NULL
+    6. Object
     <br/>
         <?php
-            $x = "PHP is nice";
-            var_dump($x);
+            class student{
+                function department(){
+                    return "Physics";
+                }
+                function details(){
+                    echo $this->department();
+                }
+            }
+            $st = new student;
+            $st->details();
         ?>
     </section>
     <section class="footeroption">
