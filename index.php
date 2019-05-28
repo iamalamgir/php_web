@@ -31,8 +31,23 @@
     
     
         <?php
+           /*
            $x = "PHP string";
            echo strlen($x);
+           
+           $y = "PHP is nice";
+           echo str_word_count($y);
+
+           $x = "PHP is nice";
+           echo strrev($x);
+
+           $x = "PHP is nice";
+           echo strpos($x, "nice");
+           */
+
+           $x = "PHP is nice";
+           echo str_replace("PHP", "JAVA", $x);
+           
         ?>
     </section>
     <section class="footeroption">
