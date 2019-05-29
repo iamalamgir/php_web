@@ -41,31 +41,31 @@
     07. Array Operators 
     <br/>
     <hr/>
-    01. Arithmetic Operators( +, -, *, /, %)
+    02. Assignment Operators ( = )
     <hr/>
     
         <?php
             /*
-            $x = 10;
-            $y = 5;
-            echo $x + $y;
+            $x = 15;
+            $x +=5;
+            echo $x;
 
-            $x = 10;
-            $y = 5;
-            echo $x - $y;
+            $x = 15;
+            $x -=5;
+            echo $x;
 
-            $x = 10;
-            $y = 5;
-            echo $x * $y;
+            $x = 15;
+            $x *=5;
+            echo $x;
             
-            $x = 10;
-            $y = 5;
-            echo $x / $y;
+            $x = 15;
+            $x /=5;
+            echo $x;
             */
 
             $x = 15;
-            $y = 2;
-            echo $x % $y;
+            $x %= 2;
+            echo $x;
         ?>
     </section>
     <section class="footeroption">
