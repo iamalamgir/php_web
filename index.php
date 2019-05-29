@@ -29,88 +29,53 @@
     </section>
     <section class="maincontent">
     
-    Operators
     <br/>
     <br/>
-    01. Arithmetic Operators <br/>
-    02. Assignment Operators <br/>
-    03. Comparison Operators <br/>
-    04. Increment/Decrement Operators <br/>
-    05. Logical Operators <br/>
-    06. String Operators <br/>
-    07. Array Operators 
-    <br/>
-    <hr/>
-    07. Array Operators
+    PHP Conditional Statements (if , if else , if else if)
     <hr/>
     
         <?php
             /*
-            $x = array("a" => "Dhaka" , "b" => "Sylhet");
-            $y = array("c" => "Comilla" , "d" => "Pavna");
-            var_dump($x + $y);
+            $x = 10;
+            if($x > 5){
+                echo "Training with live project";
+            }
 
-            $x = array(
-                "a" => "Dhaka" ,
-                "b" => "Sylhet"
-            );
-            $y = array(
-                "c" => "Comilla" ,
-                "d" => "Pavna"
-            );
-            var_dump($x == $y);
-
-            $x = array(
-                "a" => "Dhaka" ,
-                "b" => "Sylhet"
-            );
-            $y = array(
-                "c" => "Comilla" ,
-                "d" => "Pavna"
-            );
-            var_dump($x === $y);
-
-            $x = array(
-                "a" => "Dhaka" ,
-                "b" => "Sylhet"
-            );
-            $y = array(
-                "a" => "Dhaka" ,
-                "b" => "Sylhet"
-            );
-            var_dump($x === $y);
-
-            $x = array(
-                "a" => "Dhaka" ,
-                "b" => "Sylhet"
-            );
-            $y = array(
-                "c" => "Comilla" ,
-                "d" => "Pavna"
-            );
-            var_dump($x !== $y);
-
-            $x = array(
-                "a" => "Dhaka" ,
-                "b" => "Sylhet"
-            );
-            $y = array(
-                "c" => "Comilla" ,
-                "d" => "Pavna"
-            );
-            var_dump($x != $y);
+            $x = 10;
+            if($x > 15){
+                echo "Training with live project";
+            }else{
+                echo "Wrong";
+            } 
+            
+            $x = 10;
+            if($x > 15){
+                echo "x is greater then 15";
+            }elseif($x > 13){
+                echo "x is greater then 13";
+            }elseif($x > 12){
+                echo "x is greater then 12";
+            }elseif($x > 11){
+                echo "x is greater then 11";
+            }else{
+                echo "Please give a value smaller then 10";
+            }
+            
             */
 
-            $x = array(
-                "a" => "Dhaka" ,
-                "b" => "Sylhet"
-            );
-            $y = array(
-                "c" => "Comilla" ,
-                "d" => "Pavna"
-            );
-            var_dump($x <> $y);
-            
+            $x = 10;
+            if($x > 15){
+                echo "x is greater then 15";
+            }elseif($x > 13){
+                echo "x is greater then 13";
+            }elseif($x > 12){
+                echo "x is greater then 12";
+            }elseif($x > 5){
+                echo "x is greater then 5";
+            }else{
+                echo "Please give a value smaller then 10";
+            }
+
         ?>
     </section>
     <section class="footeroption">
