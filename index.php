@@ -32,21 +32,34 @@
     
         <?php
            /*
-           $x = "PHP string";
-           echo strlen($x);
-           
-           $y = "PHP is nice";
-           echo str_word_count($y);
+            PHP Constants use
+            1. Capital leter ba '_' use kora jay but '$' sine deoya nished. 
+            2. define(name, value, case-insensitive(mane true ba flase value thake))
+            3. variable change kora jay But constants change kora jay na,
+                But constants hocche 'Gulobal' eita ek bar likhe bar bar use kora jay.         
+            4. case sensitive.
+            5. data base conect korlei costants kaj korbe o kaj kora buja jabe
+            */
 
-           $x = "PHP is nice";
-           echo strrev($x);
+           /*
+            define("VALUE", "I am learning PHP");
+            echo VALUE;
 
-           $x = "PHP is nice";
-           echo strpos($x, "nice");
+            define("VALUE", "I am learning PHP", true);
+            echo value;
+
+            define("VALUE", "I am learning PHP");
+            function learnPHP(){
+               echo VALUE;
+            }
+            learnPHP();
            */
 
-           $x = "PHP is nice";
-           echo str_replace("PHP", "JAVA", $x);
+           define("VALUE", "I am learning PHP");
+           function learnPHP(){
+               return VALUE;
+           }
+           echo learnPHP();
            
         ?>
     </section>
