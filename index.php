@@ -41,43 +41,84 @@
     07. Array Operators 
     <br/>
     <hr/>
-    04. Increment/Decrement Operators ( ++, -- )
+    05. Logical Operators ( &&'And' , ||'or' , xor , != , !== )
     <hr/>
     
         <?php
             /*
-            *pre increment '++5' mane variable er agei jog sine deoya And
-                tar mane main value er sathe 1jog hoye echo hobe.
-
-            *pre decrement '--5' mane variable er agei biog sine deoya And
-                tar mane main value er sathe 1biog hoye echo hobe.
-
-            *post increment '5++' mane variable er pore jog sine deoya And 
-                ekhane ager main value ta echo kore tar por main value
-                er sathe 1jog hoye second value ta echo hoy.
-
-            *post decrement '5--' mane variable er pore biog sine deoya And 
-                ekhane ager main value ta echo kore tar por main value
-                er sathe 1biog hoye second value ta echo hoy.
+            $a = 20;
+            $b = 10;
             
+            if($a == 20 && $b == 10){
+                echo "Training with live project";
+            }else{
+                echo "Wrong";
+            }
 
-            $x = 5;
-            echo ++$x;
+            $a = 20;
+            $b = 10;
+            
+            if($a == 20 And $b == 15){
+                echo "Training with live project";
+            }else{
+                echo "Wrong";
+            }
 
-            $x = 5;
-            echo --$x;
+            $a = 20;
+            $b = 10;
+            
+            if($a == 20 || $b == 10){
+                echo "Training with live project";
+            }else{
+                echo "Wrong";
+            }
 
-            $x = 5;
-            echo $x++;
-            echo "<br/>";
-            echo $x;
+            $a = 20;
+            $b = 10;
+            
+            if($a == 20 or $b == 15){
+                echo "Training with live project";
+            }else{
+                echo "Wrong";
+            }
+
+            $a = 20;
+            $b = 10;
+            
+            if($a == 20 xor $b == 10){
+                echo "Training with live project";
+            }else{
+                echo "Wrong";
+            }
+
+            $a = 20;
+            $b = 10;
+            
+            if($a == 20 xor $b == 15){
+                echo "Training with live project";
+            }else{
+                echo "Wrong";
+            }
+
+            $a = 20;
+            $b = 10;
+            
+            if($a != 20){
+                echo "Training with live project";
+            }else{
+                echo "Wrong";
+            }
 
             */
 
-            $x = 5;
-            echo $x--;
-            echo "<br/>";
-            echo $x;
+            $a = 20;
+            $b = 10;
+            
+            if($a !== 25){
+                echo "Training with live project";
+            }else{
+                echo "Wrong";
+            }
             
         ?>
     </section>
