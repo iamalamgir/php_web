@@ -41,44 +41,76 @@
     07. Array Operators 
     <br/>
     <hr/>
-    06. String Operators (  .   ,   .=  )
+    07. Array Operators
     <hr/>
     
         <?php
             /*
-            *Concatenation string operators (.) eita diya duta string jog kore.
-            *Concatenation assignment string operators(.=) eita diya duta string jog kore.
+            $x = array("a" => "Dhaka" , "b" => "Sylhet");
+            $y = array("c" => "Comilla" , "d" => "Pavna");
+            var_dump($x + $y);
 
-            $x = "Mohammad Alamgir";
-            $y = " Hossain";
-            $z = $x . $y;
-            echo $z;
+            $x = array(
+                "a" => "Dhaka" ,
+                "b" => "Sylhet"
+            );
+            $y = array(
+                "c" => "Comilla" ,
+                "d" => "Pavna"
+            );
+            var_dump($x == $y);
 
-            $x = "Mohammad Alamgir";
-            $y = " Hossain";
-            $z = " From Narayanganj";
-            $q = " On Bangladesh";
-            $a = $x . $y . $z . $q;
-            echo $a;
+            $x = array(
+                "a" => "Dhaka" ,
+                "b" => "Sylhet"
+            );
+            $y = array(
+                "c" => "Comilla" ,
+                "d" => "Pavna"
+            );
+            var_dump($x === $y);
 
-            $x = "Mohammad Alamgir";
-            $y = " Hossain";
-            $x .= $y;
-            echo $x;
+            $x = array(
+                "a" => "Dhaka" ,
+                "b" => "Sylhet"
+            );
+            $y = array(
+                "a" => "Dhaka" ,
+                "b" => "Sylhet"
+            );
+            var_dump($x === $y);
 
-            $x = "Mohammad Alamgir";
-            $y = " Hossain";
-            $z = " From Narayanganj";
-            $x .= $y .= $z;
-            echo $x;
+            $x = array(
+                "a" => "Dhaka" ,
+                "b" => "Sylhet"
+            );
+            $y = array(
+                "c" => "Comilla" ,
+                "d" => "Pavna"
+            );
+            var_dump($x !== $y);
+
+            $x = array(
+                "a" => "Dhaka" ,
+                "b" => "Sylhet"
+            );
+            $y = array(
+                "c" => "Comilla" ,
+                "d" => "Pavna"
+            );
+            var_dump($x != $y);
             */
 
-            $x = "Mohammad Alamgir";
-            $y = " Hossain";
-            $z = " From Narayanganj";
-            $q = " On Bangladesh";
-            $x .= $y .= $z .= $q;
-            echo $x;
+            $x = array(
+                "a" => "Dhaka" ,
+                "b" => "Sylhet"
+            );
+            $y = array(
+                "c" => "Comilla" ,
+                "d" => "Pavna"
+            );
+            var_dump($x <> $y);
+            
         ?>
     </section>
     <section class="footeroption">
