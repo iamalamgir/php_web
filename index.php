@@ -41,85 +41,44 @@
     07. Array Operators 
     <br/>
     <hr/>
-    05. Logical Operators ( &&'And' , ||'or' , xor , != , !== )
+    06. String Operators (  .   ,   .=  )
     <hr/>
     
         <?php
             /*
-            $a = 20;
-            $b = 10;
-            
-            if($a == 20 && $b == 10){
-                echo "Training with live project";
-            }else{
-                echo "Wrong";
-            }
+            *Concatenation string operators (.) eita diya duta string jog kore.
+            *Concatenation assignment string operators(.=) eita diya duta string jog kore.
 
-            $a = 20;
-            $b = 10;
-            
-            if($a == 20 And $b == 15){
-                echo "Training with live project";
-            }else{
-                echo "Wrong";
-            }
+            $x = "Mohammad Alamgir";
+            $y = " Hossain";
+            $z = $x . $y;
+            echo $z;
 
-            $a = 20;
-            $b = 10;
-            
-            if($a == 20 || $b == 10){
-                echo "Training with live project";
-            }else{
-                echo "Wrong";
-            }
+            $x = "Mohammad Alamgir";
+            $y = " Hossain";
+            $z = " From Narayanganj";
+            $q = " On Bangladesh";
+            $a = $x . $y . $z . $q;
+            echo $a;
 
-            $a = 20;
-            $b = 10;
-            
-            if($a == 20 or $b == 15){
-                echo "Training with live project";
-            }else{
-                echo "Wrong";
-            }
+            $x = "Mohammad Alamgir";
+            $y = " Hossain";
+            $x .= $y;
+            echo $x;
 
-            $a = 20;
-            $b = 10;
-            
-            if($a == 20 xor $b == 10){
-                echo "Training with live project";
-            }else{
-                echo "Wrong";
-            }
-
-            $a = 20;
-            $b = 10;
-            
-            if($a == 20 xor $b == 15){
-                echo "Training with live project";
-            }else{
-                echo "Wrong";
-            }
-
-            $a = 20;
-            $b = 10;
-            
-            if($a != 20){
-                echo "Training with live project";
-            }else{
-                echo "Wrong";
-            }
-
+            $x = "Mohammad Alamgir";
+            $y = " Hossain";
+            $z = " From Narayanganj";
+            $x .= $y .= $z;
+            echo $x;
             */
 
-            $a = 20;
-            $b = 10;
-            
-            if($a !== 25){
-                echo "Training with live project";
-            }else{
-                echo "Wrong";
-            }
-            
+            $x = "Mohammad Alamgir";
+            $y = " Hossain";
+            $z = " From Narayanganj";
+            $q = " On Bangladesh";
+            $x .= $y .= $z .= $q;
+            echo $x;
         ?>
     </section>
     <section class="footeroption">
