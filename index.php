@@ -29,38 +29,43 @@
     </section>
     <section class="maincontent">
     
+    Operators
+    <br/>
+    <br/>
+    01. Arithmetic Operators <br/>
+    02. Assignment Operators <br/>
+    03. Comparison Operators <br/>
+    04. Increment/Decrement Operators <br/>
+    05. Logical Operators <br/>
+    06. String Operators <br/>
+    07. Array Operators 
+    <br/>
+    <hr/>
+    01. Arithmetic Operators( +, -, *, /, %)
+    <hr/>
     
         <?php
-           /*
-            PHP Constants use
-            1. Capital leter ba '_' use kora jay but '$' sine deoya nished. 
-            2. define(name, value, case-insensitive(mane true ba flase value thake))
-            3. variable change kora jay But constants change kora jay na,
-                But constants hocche 'Gulobal' eita ek bar likhe bar bar use kora jay.         
-            4. case sensitive.
-            5. data base conect korlei costants kaj korbe o kaj kora buja jabe
+            /*
+            $x = 10;
+            $y = 5;
+            echo $x + $y;
+
+            $x = 10;
+            $y = 5;
+            echo $x - $y;
+
+            $x = 10;
+            $y = 5;
+            echo $x * $y;
+            
+            $x = 10;
+            $y = 5;
+            echo $x / $y;
             */
 
-           /*
-            define("VALUE", "I am learning PHP");
-            echo VALUE;
-
-            define("VALUE", "I am learning PHP", true);
-            echo value;
-
-            define("VALUE", "I am learning PHP");
-            function learnPHP(){
-               echo VALUE;
-            }
-            learnPHP();
-           */
-
-           define("VALUE", "I am learning PHP");
-           function learnPHP(){
-               return VALUE;
-           }
-           echo learnPHP();
-           
+            $x = 15;
+            $y = 2;
+            echo $x % $y;
         ?>
     </section>
     <section class="footeroption">
