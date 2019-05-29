@@ -41,31 +41,80 @@
     07. Array Operators 
     <br/>
     <hr/>
-    02. Assignment Operators ( = )
+    03. Comparison Operators ( ==, ===, !=, !== <>, >, <,  >=, <=, )
     <hr/>
     
         <?php
             /*
-            $x = 15;
-            $x +=5;
-            echo $x;
+            *duita value er modde tulona kora bujay.
+            *intger o string er modde o tulona kore.
+            *data type o value er modde o tulona kore.
 
-            $x = 15;
-            $x -=5;
-            echo $x;
+            $x = 100;
+            $y = 100;
+            var_dump($x == $y);
 
-            $x = 15;
-            $x *=5;
-            echo $x;
+            $x = 100;
+            $y = "100";
+            var_dump($x === $y);
+
+            $x = "100";
+            $y = "100";
+            var_dump($x === $y);
             
-            $x = 15;
-            $x /=5;
-            echo $x;
+            $x = "100";
+            $y = "10";
+            var_dump($x === $y);
+
+            $x = 100;
+            $y = "100";
+            var_dump($x !== $y);
+
+            $x = "100";
+            $y = "100";
+            var_dump($x !== $y);
+
+            $x = "100";
+            $y = "10";
+            var_dump($x !== $y);
+
+            $x = 100;
+            $y = "100";
+            var_dump($x != $y);
+
+            $x = "100";
+            $y = "10";
+            var_dump($x != $y);
+
+            $x = 100;
+            $y = "100";
+            var_dump($x <> $y);
+
+            $x = "100";
+            $y = "10";
+            var_dump($x <> $y);
+
+            $x = 100;
+            $y = 10;
+            var_dump($x > $y);
+
+            $x = 100;
+            $y = 10;
+            var_dump($x < $y);
+
+            $x = 100;
+            $y = 10;
+            var_dump($x >= $y);
+
+            $x = 100;
+            $y = 10;
+            var_dump($x <= $y);
             */
 
-            $x = 15;
-            $x %= 2;
-            echo $x;
+            $x = "10";
+            $y = "100";
+            var_dump($x <= $y);
+            
         ?>
     </section>
     <section class="footeroption">
