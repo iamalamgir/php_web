@@ -31,68 +31,30 @@
     
     <br/>
     <br/>
-    PHP Switch Statement
+    PHP While Loops
     <hr/>
     
         <?php
             /*
-            $coding = "java";
-
-            switch($coding){
-
-                case "html":
-                echo "I love html"; 
-                break;
-
-                case "css":
-                echo "I love css";
-                break;
-
-                case "php":
-                echo "I love php";
-                break;
-
-                case "java":
-                echo "I love java";
-                break;
-
-                case "c#":
-                echo "I love c#";
-                break;
-
-                default:
-                echo "I love programming";
-            }           
-            */
-
-            $coding = "java";
-
-            switch($coding){
-
-                case "html":
-                echo "I love html"; 
-                break;
-
-                case "css":
-                echo "I love css";
-                break;
-
-                case "php":
-                echo "I love php";
-                break;
-
-                case "c":
-                echo "I love c";
-                break;
-
-                case "c#":
-                echo "I love c#";
-                break;
-
-                default:
-                echo "I love programming";
+            $x = 1;
+            while($x <= 5){
+                echo "The number is: $x <br/>";
+                $x++;
             }
 
+            $x = 1;
+            do{
+                echo "The number is: $x <br/>";
+                $x++;
+            }while($x <= 10)
+            */
+
+            $x = 4;
+            do{
+                echo "The number is: $x <br/>";
+                $x++;
+            }while($x <= 10)
+            
         ?>
     </section>
     <section class="footeroption">
