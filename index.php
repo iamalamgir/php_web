@@ -31,49 +31,66 @@
     
     <br/>
     <br/>
-    PHP Conditional Statements (if , if else , if else if)
+    PHP Switch Statement
     <hr/>
     
         <?php
             /*
-            $x = 10;
-            if($x > 5){
-                echo "Training with live project";
-            }
+            $coding = "java";
 
-            $x = 10;
-            if($x > 15){
-                echo "Training with live project";
-            }else{
-                echo "Wrong";
-            } 
-            
-            $x = 10;
-            if($x > 15){
-                echo "x is greater then 15";
-            }elseif($x > 13){
-                echo "x is greater then 13";
-            }elseif($x > 12){
-                echo "x is greater then 12";
-            }elseif($x > 11){
-                echo "x is greater then 11";
-            }else{
-                echo "Please give a value smaller then 10";
-            }
-            
+            switch($coding){
+
+                case "html":
+                echo "I love html"; 
+                break;
+
+                case "css":
+                echo "I love css";
+                break;
+
+                case "php":
+                echo "I love php";
+                break;
+
+                case "java":
+                echo "I love java";
+                break;
+
+                case "c#":
+                echo "I love c#";
+                break;
+
+                default:
+                echo "I love programming";
+            }           
             */
 
-            $x = 10;
-            if($x > 15){
-                echo "x is greater then 15";
-            }elseif($x > 13){
-                echo "x is greater then 13";
-            }elseif($x > 12){
-                echo "x is greater then 12";
-            }elseif($x > 5){
-                echo "x is greater then 5";
-            }else{
-                echo "Please give a value smaller then 10";
+            $coding = "java";
+
+            switch($coding){
+
+                case "html":
+                echo "I love html"; 
+                break;
+
+                case "css":
+                echo "I love css";
+                break;
+
+                case "php":
+                echo "I love php";
+                break;
+
+                case "c":
+                echo "I love c";
+                break;
+
+                case "c#":
+                echo "I love c#";
+                break;
+
+                default:
+                echo "I love programming";
             }
 
         ?>
