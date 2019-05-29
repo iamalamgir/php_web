@@ -41,79 +41,43 @@
     07. Array Operators 
     <br/>
     <hr/>
-    03. Comparison Operators ( ==, ===, !=, !== <>, >, <,  >=, <=, )
+    04. Increment/Decrement Operators ( ++, -- )
     <hr/>
     
         <?php
             /*
-            *duita value er modde tulona kora bujay.
-            *intger o string er modde o tulona kore.
-            *data type o value er modde o tulona kore.
+            *pre increment '++5' mane variable er agei jog sine deoya And
+                tar mane main value er sathe 1jog hoye echo hobe.
 
-            $x = 100;
-            $y = 100;
-            var_dump($x == $y);
+            *pre decrement '--5' mane variable er agei biog sine deoya And
+                tar mane main value er sathe 1biog hoye echo hobe.
 
-            $x = 100;
-            $y = "100";
-            var_dump($x === $y);
+            *post increment '5++' mane variable er pore jog sine deoya And 
+                ekhane ager main value ta echo kore tar por main value
+                er sathe 1jog hoye second value ta echo hoy.
 
-            $x = "100";
-            $y = "100";
-            var_dump($x === $y);
+            *post decrement '5--' mane variable er pore biog sine deoya And 
+                ekhane ager main value ta echo kore tar por main value
+                er sathe 1biog hoye second value ta echo hoy.
             
-            $x = "100";
-            $y = "10";
-            var_dump($x === $y);
 
-            $x = 100;
-            $y = "100";
-            var_dump($x !== $y);
+            $x = 5;
+            echo ++$x;
 
-            $x = "100";
-            $y = "100";
-            var_dump($x !== $y);
+            $x = 5;
+            echo --$x;
 
-            $x = "100";
-            $y = "10";
-            var_dump($x !== $y);
+            $x = 5;
+            echo $x++;
+            echo "<br/>";
+            echo $x;
 
-            $x = 100;
-            $y = "100";
-            var_dump($x != $y);
-
-            $x = "100";
-            $y = "10";
-            var_dump($x != $y);
-
-            $x = 100;
-            $y = "100";
-            var_dump($x <> $y);
-
-            $x = "100";
-            $y = "10";
-            var_dump($x <> $y);
-
-            $x = 100;
-            $y = 10;
-            var_dump($x > $y);
-
-            $x = 100;
-            $y = 10;
-            var_dump($x < $y);
-
-            $x = 100;
-            $y = 10;
-            var_dump($x >= $y);
-
-            $x = 100;
-            $y = 10;
-            var_dump($x <= $y);
             */
 
-            $x = "10";
-            $y = "100";
-            var_dump($x <= $y);
+            $x = 5;
+            echo $x--;
+            echo "<br/>";
+            echo $x;
             
         ?>
     </section>
