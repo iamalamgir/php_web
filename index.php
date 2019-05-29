@@ -31,30 +31,23 @@
     
     <br/>
     <br/>
-    PHP While Loops
+    PHP For Loop
     <hr/>
     
         <?php
             /*
-            $x = 1;
-            while($x <= 5){
-                echo "The number is: $x <br/>";
-                $x++;
+            for(init count; test condition; increment/decrement counter){
+                code execution.......
             }
 
-            $x = 1;
-            do{
-                echo "The number is: $x <br/>";
-                $x++;
-            }while($x <= 10)
+            for($i = 0; $i < 10; $i++){
+                echo "The number is: $i <br/>";
+            }  
             */
 
-            $x = 4;
-            do{
-                echo "The number is: $x <br/>";
-                $x++;
-            }while($x <= 10)
-            
+            for($i = 1; $i <= 10; $i++){
+                echo "The number is: $i <br/>";
+            }            
         ?>
     </section>
     <section class="footeroption">
