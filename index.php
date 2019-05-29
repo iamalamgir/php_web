@@ -31,22 +31,26 @@
     
     <br/>
     <br/>
-    PHP For Loop
+    PHP Foreach Loop
     <hr/>
     
         <?php
             /*
-            for(init count; test condition; increment/decrement counter){
+            foreach($array as $value){
                 code execution.......
             }
 
-            for($i = 0; $i < 10; $i++){
-                echo "The number is: $i <br/>";
+            $colors = array("blue", "green", "red", "skyblue", "gray");
+            foreach($colors as $color){
+                echo "$color <br/>";
             }  
+
+            
             */
 
-            for($i = 1; $i <= 10; $i++){
-                echo "The number is: $i <br/>";
+            $colors = array("1. blue", "2. green", "3. red", "4. skyblue", "5. gray");
+            foreach($colors as $color){
+                echo "$color <br/>";
             }            
         ?>
     </section>
