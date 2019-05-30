@@ -1,7 +1,7 @@
 <?php
     $fonts = "verdana";
-    $bgcolor = "orange";
-    $fontcolor = "blue";
+    $bgcolor = "#F3DFDF";
+    $fontcolor = "#B793C1";
 ?>
 
 <!doctype html>
@@ -11,7 +11,7 @@
     <style>
     .body{font-family:<?php echo $fonts;?>}
 
-    .phpcoding{width: 900px; margin: 0 auto; background:<?php echo"#ddd" ?>;}
+    .phpcoding{width: 900px; margin: 0 auto; background:<?php echo"#DDF9DB" ?>;}
 
     .headeroption, .footeroption{background:<?php echo $bgcolor; ?>; color: <?php echo $fontcolor; ?>;
      padding: 15px; text-align: center;}
@@ -30,43 +30,55 @@
     <section class="maincontent">
     
     <br/>
-    <br/>
-    PHP Functions
     <hr/>
+    PHP Arrays
+    <hr/>
+
     
         <?php
             /*
-            function school(){
-                echo "I am a student";
-            }         
-            school();
+            $x = array(5, 3, 9, 10, 15);
+            echo $x[2];
 
-            function school($name){
-                echo "$name is good school";
-            }         
-            school("Narayanganj High School");
+            $x = array(5, 3, 9, 10, 15);
+            echo count($x);
 
-            function school($name, $year){
-                echo "$name is started $year <br/>";
-            }         
-            school("Narayanganj High School", "1975");
-            school("Dhaka High School", "1990");
-            school("AH High School", "2019");
+            $x = array(5, 3, 9, 10, 15);
+            $length = count($x);
+                for($i = 0; $i < $length; $i++){
+                    echo $x[$i];
+                    echo "<br/>";
+                }
 
-            function school($name= "My School"){
-                echo "$name is good <br/>";
-            }         
-            school("Narayanganj High School");
-            school();
-            school("Dhaka High School");
-            school("AH High School");
+            $ages = array("Siam"=> "25", "Rana"=> "23", "Rony"=> "22");
+                foreach($ages as $x => $age){
+                    echo $x. ", Age =".$age;
+                    echo "<br/>";
+                }
+
+            $cars = array(
+               array("BMW", 15, 50),
+               array("Volvo", 20, 5),
+               array("Saab", 25, 30)
+            );
+                echo $cars[2][1];
             */
 
-            function sum($x, $y){
-                $z = $x + $y;
-                return $z;
-            }
-            echo "5 + 10 = " .sum(5, 10);
+           $cars = array(
+               array("BMW", 15, 50),
+               array("Volvo", 20, 5),
+               array("Audi", 23, 35),
+               array("Saab", 25, 30)
+           );
+           for($row = 0; $row < 4; $row++){
+               echo "<p>Row Number $row</p>";
+
+               echo"<ul>";
+               for($col = 0; $col < 3; $col++){
+                   echo "<li>".$cars[$row][$col]."</li>";
+               }
+               echo"</ul>";
+           }
 
         ?>
     </section>
