@@ -31,27 +31,43 @@
     
     <br/>
     <br/>
-    PHP Foreach Loop
+    PHP Functions
     <hr/>
     
         <?php
             /*
-            foreach($array as $value){
-                code execution.......
-            }
+            function school(){
+                echo "I am a student";
+            }         
+            school();
 
-            $colors = array("blue", "green", "red", "skyblue", "gray");
-            foreach($colors as $color){
-                echo "$color <br/>";
-            }  
+            function school($name){
+                echo "$name is good school";
+            }         
+            school("Narayanganj High School");
 
-            
+            function school($name, $year){
+                echo "$name is started $year <br/>";
+            }         
+            school("Narayanganj High School", "1975");
+            school("Dhaka High School", "1990");
+            school("AH High School", "2019");
+
+            function school($name= "My School"){
+                echo "$name is good <br/>";
+            }         
+            school("Narayanganj High School");
+            school();
+            school("Dhaka High School");
+            school("AH High School");
             */
 
-            $colors = array("1. blue", "2. green", "3. red", "4. skyblue", "5. gray");
-            foreach($colors as $color){
-                echo "$color <br/>";
-            }            
+            function sum($x, $y){
+                $z = $x + $y;
+                return $z;
+            }
+            echo "5 + 10 = " .sum(5, 10);
+
         ?>
     </section>
     <section class="footeroption">
