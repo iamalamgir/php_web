@@ -31,55 +31,73 @@
     
     <br/>
     <hr/>
-    PHP Arrays
+    PHP Sorting Arrays
     <hr/>
 
     
         <?php
             /*
-            $x = array(5, 3, 9, 10, 15);
-            echo $x[2];
+            $name = array("Rana", "Siam", "Hasive", "Mahin", "Alamgir");
+            sort($name);
+            
+            for($i = 0; $i < 5; $i++){
+                echo $name[$i];
+                echo "<br/>";
+            }
 
-            $x = array(5, 3, 9, 10, 15);
-            echo count($x);
+            $name = array("Rana", "Siam", "Hasive", "Mahin", "Alamgir");
+            sort($name);
+            $length = count($name);
+            
+            for($i = 0; $i < $length; $i++){
+                echo $name[$i];
+                echo "<br/>";
+            }
 
-            $x = array(5, 3, 9, 10, 15);
-            $length = count($x);
-                for($i = 0; $i < $length; $i++){
-                    echo $x[$i];
-                    echo "<br/>";
-                }
+            $name = array("Rana", "Siam", "Hasive", "Mahin", "Alamgir");
+            rsort($name);
+            $length = count($name);
+            
+            for($i = 0; $i < $length; $i++){
+                echo $name[$i];
+                echo "<br/>";
+            }
 
-            $ages = array("Siam"=> "25", "Rana"=> "23", "Rony"=> "22");
-                foreach($ages as $x => $age){
-                    echo $x. ", Age =".$age;
-                    echo "<br/>";
-                }
+            $name = array(30, 5, 100, 20, 50);
+            sort($name);
+            $length = count($name);
+            
+            for($i = 0; $i < $length; $i++){
+                echo $name[$i];
+                echo "<br/>";
+            }
 
-            $cars = array(
-               array("BMW", 15, 50),
-               array("Volvo", 20, 5),
-               array("Saab", 25, 30)
-            );
-                echo $cars[2][1];
+            $name = array(30, 5, 100, 20, 50);
+            rsort($name);
+            $length = count($name);
+            
+            for($i = 0; $i < $length; $i++){
+                echo $name[$i];
+                echo "<br/>";
+            }
+
+            $age = array("Rana"=>"20", "Siam"=>"25", "Hasive"=>"15", "Mahin"=>"40", "Alamgir"=>"60");
+            asort($age);
+            
+            foreach($age as $key => $value){
+                echo "Key = ".$key." Value = ".$value;
+                echo "<br/>";
+            }
+            
             */
 
-           $cars = array(
-               array("BMW", 15, 50),
-               array("Volvo", 20, 5),
-               array("Audi", 23, 35),
-               array("Saab", 25, 30)
-           );
-           for($row = 0; $row < 4; $row++){
-               echo "<p>Row Number $row</p>";
-
-               echo"<ul>";
-               for($col = 0; $col < 3; $col++){
-                   echo "<li>".$cars[$row][$col]."</li>";
-               }
-               echo"</ul>";
-           }
-
+            $age = array("Rana"=>"20", "Siam"=>"25", "Hasive"=>"15", "Mahin"=>"40", "Alamgir"=>"60");
+            ksort($age);
+            
+            foreach($age as $key => $value){
+                echo "Key = ".$key." Value = ".$value;
+                echo "<br/>";
+            }
         ?>
     </section>
     <section class="footeroption">
