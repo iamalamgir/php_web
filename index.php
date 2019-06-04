@@ -30,50 +30,40 @@
     <section class="maincontent">
     
     <br/>
+    
+    PHP Supergolbals
     <hr/>
-    PHP Variable Scope
+    01. $GLOBALS <br/>
+    02. $_SERVER <br/>
+    03. $_REQUEST <br/>
+    04. $_POST <br/>
+    05. $_GET <br/>
+    06. $_FILES <br/>
+    07. $_ENV <br/>
+    08. $_COOKIE <br/>
+    09. $_SESSION <br/>
+    10. $php_errormsg <br/>
+    11. $HTTP_RAW_POST_DATA <br/>
+    12. $http_response_header
     <hr/>
+    <br/>
+    01. $GLOBALS 
+    <hr/>
+    <br/>
 
     
         <?php
             /*
-            function test1(){
-                $a = 5;
-                echo $a;
-            }
-            test1();
-
-            function test1(){
-                $a = 5;
-                echo $a;
-                echo "<br/>";
-            }
-            function test2(){
-                $b = 10;
-                echo $b;
-            }
-            test1();
-            test2();
-            
+           
             */
-            $x = 15;
-            function test1(){
-                global $x;
-                $a = 5;
-                echo $a;
-                echo "<br/>";
-                echo "Access from function test1 ".$x;
-                echo "<br/>";
+            $x = 5;
+            $y = 10;
+            function sum(){
+                $GLOBALS['z'] = $GLOBALS['x'] + $GLOBALS['y'];
             }
-            function test2(){
-                global $x;
-                $b = 10;
-                echo $b;
-                echo "<br/>";
-                echo "Access from function test2 ".$x;
-            }
-            test1();
-            test2();
+            sum();
+            echo $z;
+            
             
         ?>
     </section>
