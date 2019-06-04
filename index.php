@@ -30,40 +30,25 @@
     <section class="maincontent">
     
     <br/>
-    
-    PHP Supergolbals
     <hr/>
-    01. $GLOBALS <br/>
-    02. $_SERVER <br/>
-    03. $_REQUEST <br/>
-    04. $_POST <br/>
-    05. $_GET <br/>
-    06. $_FILES <br/>
-    07. $_ENV <br/>
-    08. $_COOKIE <br/>
-    09. $_SESSION <br/>
-    10. $php_errormsg <br/>
-    11. $HTTP_RAW_POST_DATA <br/>
-    12. $http_response_header
+    PHP Superglobals [$GLOBALS & $_SERVER]
     <hr/>
     <br/>
-    01. $GLOBALS 
-    <hr/>
-    <br/>
+   
 
     
         <?php
             /*
-           
+            echo $_SERVER['PHP_SELF'];
+
+            echo $_SERVER['SERVER_NAME'];
+
+            echo $_SERVER['SCRIPT_NAME'];
+
+            echo $_SERVER['HTTP_USER_AGENT'];
             */
-            $x = 5;
-            $y = 10;
-            function sum(){
-                $GLOBALS['z'] = $GLOBALS['x'] + $GLOBALS['y'];
-            }
-            sum();
-            echo $z;
             
+            echo $_SERVER['SERVER_ADDR'];
             
         ?>
     </section>
