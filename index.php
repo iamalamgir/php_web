@@ -31,73 +31,50 @@
     
     <br/>
     <hr/>
-    PHP Sorting Arrays
+    PHP Variable Scope
     <hr/>
 
     
         <?php
             /*
-            $name = array("Rana", "Siam", "Hasive", "Mahin", "Alamgir");
-            sort($name);
-            
-            for($i = 0; $i < 5; $i++){
-                echo $name[$i];
-                echo "<br/>";
+            function test1(){
+                $a = 5;
+                echo $a;
             }
+            test1();
 
-            $name = array("Rana", "Siam", "Hasive", "Mahin", "Alamgir");
-            sort($name);
-            $length = count($name);
-            
-            for($i = 0; $i < $length; $i++){
-                echo $name[$i];
+            function test1(){
+                $a = 5;
+                echo $a;
                 echo "<br/>";
             }
-
-            $name = array("Rana", "Siam", "Hasive", "Mahin", "Alamgir");
-            rsort($name);
-            $length = count($name);
-            
-            for($i = 0; $i < $length; $i++){
-                echo $name[$i];
-                echo "<br/>";
+            function test2(){
+                $b = 10;
+                echo $b;
             }
-
-            $name = array(30, 5, 100, 20, 50);
-            sort($name);
-            $length = count($name);
-            
-            for($i = 0; $i < $length; $i++){
-                echo $name[$i];
-                echo "<br/>";
-            }
-
-            $name = array(30, 5, 100, 20, 50);
-            rsort($name);
-            $length = count($name);
-            
-            for($i = 0; $i < $length; $i++){
-                echo $name[$i];
-                echo "<br/>";
-            }
-
-            $age = array("Rana"=>"20", "Siam"=>"25", "Hasive"=>"15", "Mahin"=>"40", "Alamgir"=>"60");
-            asort($age);
-            
-            foreach($age as $key => $value){
-                echo "Key = ".$key." Value = ".$value;
-                echo "<br/>";
-            }
+            test1();
+            test2();
             
             */
-
-            $age = array("Rana"=>"20", "Siam"=>"25", "Hasive"=>"15", "Mahin"=>"40", "Alamgir"=>"60");
-            ksort($age);
-            
-            foreach($age as $key => $value){
-                echo "Key = ".$key." Value = ".$value;
+            $x = 15;
+            function test1(){
+                global $x;
+                $a = 5;
+                echo $a;
+                echo "<br/>";
+                echo "Access from function test1 ".$x;
                 echo "<br/>";
             }
+            function test2(){
+                global $x;
+                $b = 10;
+                echo $b;
+                echo "<br/>";
+                echo "Access from function test2 ".$x;
+            }
+            test1();
+            test2();
+            
         ?>
     </section>
     <section class="footeroption">
