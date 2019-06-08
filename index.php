@@ -31,16 +31,63 @@
     
     <br/>
     <hr/>
-    PHP Superglobals [$_GET]
+    PHP Form Validation
     <hr/>
     <br/>
+        <form method ="post" action ="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
+        <table>
+            <tr>
+                <td>Name  </td>
+                <td><input type ="text" name ="name" required/></td>
+            </tr>
+            <tr>
+                <td>Email  </td>
+                <td><input type ="text" name ="email"/></td>
+            </tr>
+            <tr>
+                <td>Website  </td>
+                <td><input type ="text" name ="website"/></td>
+            </tr>
+            <tr>
+                <td>Comment  </td>
+                <td><textarea name ="comment" rows ="5" cols ="40"></textarea></td>
+            </tr>
+            <tr>
+                <td>Gender </td>
+                <td>
+                <input type ="radio" name ="gender" value ="femail"/>Femail
+                <input type ="radio" name ="gender" value ="mail"/>Mail
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type ="submit" name ="Submit"/></td>
+            </tr>
+        </table>
+        </form>
         
-        <a href ="text.php? msg=Good & text=Bye">Sent Data</a>
-    
         <?php
-            /*
-            
-            */
+           
+            $name = $email = $website = $comment = $gender =""; 
+            if($_SERVER["REQUEST_METHOD"] == "POST"){
+                $Name    = validate($_POST["name"]);
+                $Email   = validate($_POST["email"]);
+                $Website = validate($_POST["website"]);
+                $Comment = validate($_POST["comment"]);
+                $Gender  = validate($_POST["gender"]);
+
+                echo "Name : ".$name."<br/>";
+                echo "E-mail: ".$email."<br/>";
+                echo "Website : ".$website."<br/>";
+                echo "Comment : ".$comment."<br/>";
+                echo "Gender : ".$gender;
+            }
+            function validate($data){
+                $data = trim($data);
+                $data = stripcslashes($data);
+                $data = htmlspecialchars($data);
+                return $data;
+            }
             
         ?>
     </section>
