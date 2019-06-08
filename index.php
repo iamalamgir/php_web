@@ -31,24 +31,29 @@
     
     <br/>
     <hr/>
-    PHP Superglobals [$GLOBALS & $_SERVER]
+    PHP Superglobals [$_REQUEST & $_POST]
     <hr/>
     <br/>
+        <from action = "<?php echo $_SERVER['PHP_SELF'] ?>" method = "post">
+            Username: <input type = "text" name = "username"/>
+            <input type = "submit" value = "Submit"/>
+        </from>
    
 
     
         <?php
             /*
-            echo $_SERVER['PHP_SELF'];
-
-            echo $_SERVER['SERVER_NAME'];
-
-            echo $_SERVER['SCRIPT_NAME'];
-
-            echo $_SERVER['HTTP_USER_AGENT'];
-            */
             
-            echo $_SERVER['SERVER_ADDR'];
+            */
+            if($_SERVER["REQUEST_METHOD"] == "POST"){
+                $name = $_POST['username'];
+                if(empty($name)){
+                    echo "<span style = 'color:red'>Username field must not be empty !</span>";
+                }else{
+                    echo "<span style = 'color:green'>You have submitted: ".$name."</span>";
+                }
+            }
+            
             
         ?>
     </section>
