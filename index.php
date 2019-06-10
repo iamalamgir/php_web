@@ -2,6 +2,42 @@
     $fonts = "verdana";
     $bgcolor = "#F3DFDF";
     $fontcolor = "#B793C1";
+    $errname = $erremail = $errwebsite = $errgender ="";
+    $name = $email = $website = $comment = $gender =""; 
+            if($_SERVER["REQUEST_METHOD"] == "POST"){
+                if(empty($_POST["name"])){
+                    $errname = "<span style= 'color: red'>Name is required.</span>";
+                }else{
+                    $Name    = validate($_POST["name"]);
+                }
+
+                if(empty($_POST["email"])){
+                    $erremail = "<span style= 'color: red'>E-mail is required.</span>";
+                }else{
+                    $Email   = validate($_POST["email"]);
+                }
+
+                if(empty($_POST["website"])){
+                    $errwebsite = "<span style= 'color: red'>Website is requiredv.</span>";
+                }else{
+                    $Website = validate($_POST["website"]);
+                }
+
+                $Comment = validate($_POST["comment"]);
+
+                if(empty($_POST["gender"])){
+                    $errgender = "<span style= 'color: red'>Gender is required.</span>";
+                }else{
+                    $Gender  = validate($_POST["gender"]);
+                }
+               
+            }
+            function validate($data){
+                $data = trim($data);
+                $data = stripcslashes($data);
+                $data = htmlspecialchars($data);
+                return $data;
+            }
 ?>
 
 <!doctype html>
@@ -29,25 +65,27 @@
     </section>
     <section class="maincontent">
     
-    <br/>
-    <hr/>
-    PHP Form Validation
-    <hr/>
-    <br/>
+        <br/>
+        <hr/>
+        PHP Form Required
+        <hr/>
+        <br/>
         
         <form method="post" action="<?php echo htmlspecialchars ($_SERVER['PHP_SELF']); ?>">
         <table>
+
+            <p style= "color: red" >* Required field</p>
             <tr>
                 <td>Name  </td>
-                <td><input type ="text" name ="name" required/></td>
+                <td><input type ="text" name ="name"/>*<?php echo $errname;?></td>
             </tr>
             <tr>
                 <td>Email  </td>
-                <td><input type ="text" name ="email"/></td>
+                <td><input type ="text" name ="email"/>*<?php echo $erremail;?></td>
             </tr>
             <tr>
                 <td>Website  </td>
-                <td><input type ="text" name ="website"/></td>
+                <td><input type ="text" name ="website"/>*<?php echo $errwebsite;?></td>
             </tr>
             <tr>
                 <td>Comment  </td>
@@ -58,6 +96,7 @@
                 <td>
                 <input type ="radio" name ="gender" value ="femail"/>Femail
                 <input type ="radio" name ="gender" value ="mail"/>Mail
+                *<?php echo $errgender;?>
                 </td>
             </tr>
             <tr>
@@ -66,34 +105,15 @@
             </tr>
         </table>
         </form>
-        
-        <?php
-           
-            $name = $email = $website = $comment = $gender =""; 
-            if($_SERVER["REQUEST_METHOD"] == "POST"){
-                $Name    = validate($_POST["name"]);
-                $Email   = validate($_POST["email"]);
-                $Website = validate($_POST["website"]);
-                $Comment = validate($_POST["comment"]);
-                $Gender  = validate($_POST["gender"]);
 
-                
-                echo "Name : ".$Name."<br/>";
-                echo "E-mail: ".$Email."<br/>";
-                echo "Website : ".$Website."<br/>";
-                echo "Comment : ".$Comment."<br/>";
-                echo "Gender : ".$Gender;
-               
-            }
-            function validate($data){
-                $data = trim($data);
-                $data = stripcslashes($data);
-                $data = htmlspecialchars($data);
-                return $data;
-            }
-            
-            
+        <?php
+            echo "Name : ".$Name."<br/>";
+            echo "E-mail: ".$Email."<br/>";
+            echo "Website : ".$Website."<br/>";
+            echo "Comment : ".$Comment."<br/>";
+            echo "Gender : ".$Gender;
         ?>
+        
     </section>
     <section class="footeroption">
         <h2><?php echo"www.trainingwithliveproject.com"; ?></h2>
