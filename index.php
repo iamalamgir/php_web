@@ -34,7 +34,8 @@
     PHP Form Validation
     <hr/>
     <br/>
-        <form method ="post" action ="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
+        
+        <form method="post" action="<?php echo htmlspecialchars ($_SERVER['PHP_SELF']); ?>">
         <table>
             <tr>
                 <td>Name  </td>
@@ -76,11 +77,13 @@
                 $Comment = validate($_POST["comment"]);
                 $Gender  = validate($_POST["gender"]);
 
-                echo "Name : ".$name."<br/>";
-                echo "E-mail: ".$email."<br/>";
-                echo "Website : ".$website."<br/>";
-                echo "Comment : ".$comment."<br/>";
-                echo "Gender : ".$gender;
+                
+                echo "Name : ".$Name."<br/>";
+                echo "E-mail: ".$Email."<br/>";
+                echo "Website : ".$Website."<br/>";
+                echo "Comment : ".$Comment."<br/>";
+                echo "Gender : ".$Gender;
+               
             }
             function validate($data){
                 $data = trim($data);
@@ -88,6 +91,7 @@
                 $data = htmlspecialchars($data);
                 return $data;
             }
+            
             
         ?>
     </section>
