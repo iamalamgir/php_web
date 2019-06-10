@@ -13,12 +13,16 @@
 
                 if(empty($_POST["email"])){
                     $erremail = "<span style= 'color: red'>E-mail is required.</span>";
+                }elseif(!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)){
+                    $erremail = "<span style= 'color: red'>Invalid E-mail format.</span>";
                 }else{
                     $Email   = validate($_POST["email"]);
                 }
 
                 if(empty($_POST["website"])){
                     $errwebsite = "<span style= 'color: red'>Website is requiredv.</span>";
+                }elseif(!filter_var($_POST["website"], FILTER_VALIDATE_URL)){
+                    $errwebsite = "<span style= 'color: red'>Invalid website format.</span>";
                 }else{
                     $Website = validate($_POST["website"]);
                 }
