@@ -3,7 +3,7 @@
         
             <br/>
             <hr/>
-            PHP include and Require
+            PHP File Handling
             <span style= "float:right">
                 <?php
                     date_default_timezone_set('Asia/Dhaka');
@@ -14,7 +14,7 @@
             <br/>
         
             <?php
-                
+                echo readfile("text.txt");   
             ?>
             
         </section>
