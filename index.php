@@ -7,7 +7,7 @@ setcookie('visited', "", time() - 3600);
         
         <br/>
         <hr/>
-        PHP Cookies
+        PHP Filters
         <span style= "float:right">
             <?php
                 date_default_timezone_set('Asia/Dhaka');
@@ -16,18 +16,40 @@ setcookie('visited', "", time() - 3600);
         </span>
         <hr/>
         <br/>
+        
+            <?php
+                /*$str = "<h2> I am Learning PHP.</h2>";
+                $newstr = filter_var($str, FILTER_SANITIZE_STRING);
+                echo $newstr; 
 
-        <?php
-           //setcookie(name, value, expire, path, domain, secure, httponly);
+                $int = 50;
+                if(filter_var($int, FILTER_VALIDATE_INT)){
+                    echo "It is Interger Value.";
+                }else{
+                    echo "It is Not Interger Value.";
+                }
 
-           /*if(!isset($_COOKIE['visited'])){
-               setcookie("visited", "1", time()+86400, "/") or die("Could not set cookie !");
-               echo "This is your first visit in this website.";
-           }else{
-               echo "You are our old visitor";
-           }*/
-           echo "Cookies deleted";
-        ?>
+                $ip = "127.0.0.1";
+                if(filter_var($ip, FILTER_VALIDATE_IP)){
+                    echo "$ip is valid IP Address.";
+                }else{
+                    echo "$ip is not valid IP Address.";
+                }
+
+                $email = "alamgir@gmail.com";
+                if(filter_var($email, FILTER_VALIDATE_EMAIL)){
+                    echo "$email is valid Email Address.";
+                }else{
+                    echo "$email is not valid Email Address.";
+                }*/
+
+                $url = "http://www.trainingwithliveproject.com";
+                if(filter_var($url, FILTER_VALIDATE_URL)){
+                    echo "$url is valid Website Address.";
+                }else{
+                    echo "$url is not valid Website Address.";
+                }
+            ?>
 
     </section>        
 <?php include 'footer.php'; ?>
