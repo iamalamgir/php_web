@@ -1,12 +1,13 @@
 <?php 
 session_start();
 include 'header.php'; 
+setcookie('visited', "", time() - 3600);
 ?>
     <section class="maincontent">
         
         <br/>
         <hr/>
-        PHP Sessions
+        PHP Cookies
         <span style= "float:right">
             <?php
                 date_default_timezone_set('Asia/Dhaka');
@@ -17,13 +18,15 @@ include 'header.php';
         <br/>
 
         <?php
-           $_SESSION['user']     = " Alamgir";
-           $_SESSION['password'] = " 123";
+           //setcookie(name, value, expire, path, domain, secure, httponly);
 
-           echo "Username is".$_SESSION['user']."<br/>";
-           //session_unset();
-           echo "password is".$_SESSION['password'];
-           session_destroy();
+           /*if(!isset($_COOKIE['visited'])){
+               setcookie("visited", "1", time()+86400, "/") or die("Could not set cookie !");
+               echo "This is your first visit in this website.";
+           }else{
+               echo "You are our old visitor";
+           }*/
+           echo "Cookies deleted";
         ?>
 
     </section>        
