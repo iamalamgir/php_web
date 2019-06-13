@@ -3,7 +3,7 @@
         
         <br/>
         <hr/>
-        PHP File Create/Write
+        PHP File Upload
         <span style= "float:right">
             <?php
                 date_default_timezone_set('Asia/Dhaka');
@@ -14,15 +14,17 @@
         <br/>
 
         <?php
-            $createfile = fopen("new.txt", "w") or die("File not found !!");
-            $one = "Alamgir Hossain\n";
-            fwrite($createfile, $one);
-            fclose($createfile);
-              
+           if(isset($_FILES['image'])){
+                $filename = $_FILES['image']['name'];
+                $filetmp = $_FILES['image']['tmp_name'];
+                move_uploaded_file($filetmp, "images/".$filename);
+                echo "Image uploaded Successfully";
+           }
         ?>
-        
+        <form method= "POST" action= "" enctype= "multipart/form-data ">
+            <input type= "file" name= "image"/>
+            <input type= "submit" Value= "Submit"/>
+        </form>
 
-       
-        
     </section>        
 <?php include 'footer.php'; ?>
