@@ -7,7 +7,7 @@ setcookie('visited', "", time() - 3600);
         
         <br/>
         <hr/>
-        PHP Filters
+        PHP Filters Advanced
         <span style= "float:right">
             <?php
                 date_default_timezone_set('Asia/Dhaka');
@@ -18,37 +18,23 @@ setcookie('visited', "", time() - 3600);
         <br/>
         
             <?php
-                /*$str = "<h2> I am Learning PHP.</h2>";
-                $newstr = filter_var($str, FILTER_SANITIZE_STRING);
-                echo $newstr; 
+              $intnum = 300;
+              $min = 1;
+              $max = 200;
+              if(filter_var($intnum, FILTER_VALIDATE_INT, array("options" => array("min_rang" => $min,
+              "max_range" =>$max)))){
+                  echo "It is valid range";
+              }else{
+                  echo "It is not valid range";
+              }
+              echo "<br/>";
 
-                $int = 50;
-                if(filter_var($int, FILTER_VALIDATE_INT)){
-                    echo "It is Interger Value.";
-                }else{
-                    echo "It is Not Interger Value.";
-                }
-
-                $ip = "127.0.0.1";
-                if(filter_var($ip, FILTER_VALIDATE_IP)){
-                    echo "$ip is valid IP Address.";
-                }else{
-                    echo "$ip is not valid IP Address.";
-                }
-
-                $email = "alamgir@gmail.com";
-                if(filter_var($email, FILTER_VALIDATE_EMAIL)){
-                    echo "$email is valid Email Address.";
-                }else{
-                    echo "$email is not valid Email Address.";
-                }*/
-
-                $url = "http://www.trainingwithliveproject.com";
-                if(filter_var($url, FILTER_VALIDATE_URL)){
-                    echo "$url is valid Website Address.";
-                }else{
-                    echo "$url is not valid Website Address.";
-                }
+              $url = "http://www.trainingwithliveproject.com";
+              if(filter_var($url, FILTER_VALIDATE_URL, FILTER_FLAG_QUERY_REQUIRED)){
+                echo "This url is valid";
+              }else{
+                  echo "It has not query string";
+              }
             ?>
 
     </section>        
