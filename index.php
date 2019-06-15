@@ -7,7 +7,7 @@ setcookie('visited', "", time() - 3600);
         
         <br/>
         <hr/>
-        PHP array() Function - array_change_key_case()
+        PHP array() Function - array_column()
         <span style= "float:right">
             <?php
                 date_default_timezone_set('Asia/Dhaka');
@@ -20,28 +20,52 @@ setcookie('visited', "", time() - 3600);
             <?php
                 /*
                 $name = array(
-                    "Siam"    => "24",
-                    "Hasive"  => "26",
-                    "Alamgir" => "23",
-                    "Mahin"   => "30",
-                    "Imran"   => "27",
-                    "Belal"   => "28",
-                );
+                            array( 
+                            'id'         => '200',
+                            'first_name' => 'Alamgir',
+                            'last_name'  => 'Hossain'
+                            ),
+
+                            array( 
+                                'id'         => '201',
+                                'first_name' => 'Imran',
+                                'last_name'  => 'Khan'
+                            ),
+
+                            array( 
+                                'id'         => '202',
+                                'first_name' => 'Siam',
+                                'last_name'  => 'Hasan'
+                            ),
+                        );
+                $firstname = array_column($name, 'first_name');        
                 print("<pre>");
-                print_r(array_change_key_case($name, CASE_UPPER));
+                print_r($firstname);
                 print("</pre>");
                 */
 
                 $name = array(
-                    "SIAM"    => "24",
-                    "Hasive"  => "26",
-                    "Alamgir" => "23",
-                    "Mahin"   => "30",
-                    "IMRAN"   => "27",
-                    "Belal"   => "28",
-                );
+                            array( 
+                            'id'         => '200',
+                            'first_name' => 'Alamgir',
+                            'last_name'  => 'Hossain'
+                            ),
+
+                            array( 
+                                'id'         => '201',
+                                'first_name' => 'Imran',
+                                'last_name'  => 'Khan'
+                            ),
+
+                            array( 
+                                'id'         => '202',
+                                'first_name' => 'Siam',
+                                'last_name'  => 'Hasan'
+                            ),
+                        );
+                $firstname = array_column($name, 'first_name', 'id');        
                 print("<pre>");
-                print_r(array_change_key_case($name, CASE_LOWER));
+                print_r($firstname);
                 print("</pre>");
                 
             ?>
