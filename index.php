@@ -7,7 +7,7 @@ setcookie('visited', "", time() - 3600);
         
         <br/>
         <hr/>
-        PHP array() Function - array_column()
+        PHP array() Function - array_combine()
         <span style= "float:right">
             <?php
                 date_default_timezone_set('Asia/Dhaka');
@@ -19,53 +19,21 @@ setcookie('visited', "", time() - 3600);
         
             <?php
                 /*
-                $name = array(
-                            array( 
-                            'id'         => '200',
-                            'first_name' => 'Alamgir',
-                            'last_name'  => 'Hossain'
-                            ),
+                $name = array("Alamgir", "Siam", "Hasive");
+                $department = array("Accounting", "Computer Science", "Physics");
 
-                            array( 
-                                'id'         => '201',
-                                'first_name' => 'Imran',
-                                'last_name'  => 'Khan'
-                            ),
-
-                            array( 
-                                'id'         => '202',
-                                'first_name' => 'Siam',
-                                'last_name'  => 'Hasan'
-                            ),
-                        );
-                $firstname = array_column($name, 'first_name');        
+                $combine = array_combine($name, $department);        
                 print("<pre>");
-                print_r($firstname);
+                print_r($combine);
                 print("</pre>");
                 */
 
-                $name = array(
-                            array( 
-                            'id'         => '200',
-                            'first_name' => 'Alamgir',
-                            'last_name'  => 'Hossain'
-                            ),
+                $name = array("Alamgir", "Siam", "Hasive");
+                $age = array("23", "24", "25");
 
-                            array( 
-                                'id'         => '201',
-                                'first_name' => 'Imran',
-                                'last_name'  => 'Khan'
-                            ),
-
-                            array( 
-                                'id'         => '202',
-                                'first_name' => 'Siam',
-                                'last_name'  => 'Hasan'
-                            ),
-                        );
-                $firstname = array_column($name, 'first_name', 'id');        
+                $combine = array_combine($name, $age);        
                 print("<pre>");
-                print_r($firstname);
+                print_r($combine);
                 print("</pre>");
                 
             ?>
