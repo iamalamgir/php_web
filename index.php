@@ -7,7 +7,7 @@ setcookie('visited', "", time() - 3600);
         
         <br/>
         <hr/>
-        PHP explode() & implode() Function
+        PHP Case Change
         <span style= "float:right">
             <?php
                 date_default_timezone_set('Asia/Dhaka');
@@ -19,14 +19,40 @@ setcookie('visited', "", time() - 3600);
         
             <?php
                 /*
-                $mystr = "We are learning PHP";
-                $str = explode(" ", $mystr);
-                echo $str[3];
-                */
-                
-                $mystr = array("We", "are", "learning", "PHP");
-                echo implode(" ", $mystr);
+               if(isset($_POST['text'])){
+                   $txt = $_POST['text'];
+                   echo $txt;
+               }
+
+               if(isset($_POST['text'])){
+                global $txt;
+                $txt = $_POST['text'];
+                echo strtoupper($txt);
+                }
+
+               if(isset($_POST['text'])){
+                global $txt;
+                $txt = $_POST['text'];
+                echo strtolower($txt);
+            }
+        
+            if(isset($_POST['text'])){
+                global $txt;
+                $txt = $_POST['text'];
+                echo ucfirst($txt);
+            }
+            */
+
+            if(isset($_POST['text'])){
+                global $txt;
+                $txt = $_POST['text'];
+                echo ucwords($txt);
+            }
             ?>
+            <form action="index.php" method="post">
+                <input type="text" name= "text" value="<?php global $txt; echo $txt; ?>"/>
+                <input type="submit" value= "Submit"/>
+            </form>
 
     </section>        
 <?php include 'footer.php'; ?>

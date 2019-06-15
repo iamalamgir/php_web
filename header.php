@@ -21,6 +21,8 @@
     .maincontent{min-height: 400px; padding: 20px;}
 
     p{margin: 0;}
+
+    input[type="text"]{width: 250px;}
     </style>
 </head>
 <body>
