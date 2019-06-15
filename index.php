@@ -7,7 +7,7 @@ setcookie('visited', "", time() - 3600);
         
         <br/>
         <hr/>
-        PHP array() Function - array_combine()
+        PHP array() Function - array_count_values
         <span style= "float:right">
             <?php
                 date_default_timezone_set('Asia/Dhaka');
@@ -19,21 +19,19 @@ setcookie('visited', "", time() - 3600);
         
             <?php
                 /*
-                $name = array("Alamgir", "Siam", "Hasive");
-                $department = array("Accounting", "Computer Science", "Physics");
-
-                $combine = array_combine($name, $department);        
+                $name = array("Alamgir", "Alamgir", "Siam", "Hasive", "Siam", "Hasive", "Siam", "Alamgir", "Alamgir");
+                $age = array("23", "24", "25", "23", "24", "25", "23", "25", "23", "24", "24");
+       
                 print("<pre>");
-                print_r($combine);
+                print_r(array_count_values($name));
                 print("</pre>");
                 */
 
-                $name = array("Alamgir", "Siam", "Hasive");
-                $age = array("23", "24", "25");
-
-                $combine = array_combine($name, $age);        
+                $name = array("Alamgir", "Alamgir", "Siam", "Hasive", "Siam", "Hasive", "Siam", "Alamgir", "Alamgir");
+                $age = array("23", "24", "25", "23", "24", "25", "23", "25", "23", "24", "24");
+       
                 print("<pre>");
-                print_r($combine);
+                print_r(array_count_values($age));
                 print("</pre>");
                 
             ?>
