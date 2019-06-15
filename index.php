@@ -7,7 +7,7 @@ setcookie('visited', "", time() - 3600);
         
         <br/>
         <hr/>
-        PHP array() Function - Create Array
+        PHP array() Function - array_change_key_case()
         <span style= "float:right">
             <?php
                 date_default_timezone_set('Asia/Dhaka');
@@ -19,20 +19,7 @@ setcookie('visited', "", time() - 3600);
         
             <?php
                 /*
-                $car = array("Volvo", "BMW", "Toyota");
-                echo $car[1];
-
-                $car = array("Volvo", "BMW", "Toyota");
-                $length = count($car);
-                echo $length;
-
-                $car = array("Volvo", "BMW", "Toyota");
-                $length = count($car);
-                for($i = 0; $i < $length; $i++){
-                    echo $car[$i]."<br>";
-                }
-
-                $age = array(
+                $name = array(
                     "Siam"    => "24",
                     "Hasive"  => "26",
                     "Alamgir" => "23",
@@ -40,18 +27,22 @@ setcookie('visited', "", time() - 3600);
                     "Imran"   => "27",
                     "Belal"   => "28",
                 );
-                foreach($age as $key=> $value){
-                    echo "Name = ".$key.", Age = ".$value;
-                    echo "<br>";
-                }
+                print("<pre>");
+                print_r(array_change_key_case($name, CASE_UPPER));
+                print("</pre>");
                 */
 
-                $car = array(
-                    array("Volvo", "100", "90"),
-                    array("BMW", "50", "70"),
-                    array("Toyota", "120", "190")
+                $name = array(
+                    "SIAM"    => "24",
+                    "Hasive"  => "26",
+                    "Alamgir" => "23",
+                    "Mahin"   => "30",
+                    "IMRAN"   => "27",
+                    "Belal"   => "28",
                 );
-                echo $car[2][0];
+                print("<pre>");
+                print_r(array_change_key_case($name, CASE_LOWER));
+                print("</pre>");
                 
             ?>
             
