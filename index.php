@@ -7,7 +7,7 @@ setcookie('visited', "", time() - 3600);
         
         <br/>
         <hr/>
-        PHP array() Function - array_count_values
+        PHP array() Function - array_diff
         <span style= "float:right">
             <?php
                 date_default_timezone_set('Asia/Dhaka');
@@ -19,19 +19,29 @@ setcookie('visited', "", time() - 3600);
         
             <?php
                 /*
-                $name = array("Alamgir", "Alamgir", "Siam", "Hasive", "Siam", "Hasive", "Siam", "Alamgir", "Alamgir");
-                $age = array("23", "24", "25", "23", "24", "25", "23", "25", "23", "24", "24");
-       
-                print("<pre>");
-                print_r(array_count_values($name));
-                print("</pre>");
+                
                 */
 
-                $name = array("Alamgir", "Alamgir", "Siam", "Hasive", "Siam", "Hasive", "Siam", "Alamgir", "Alamgir");
-                $age = array("23", "24", "25", "23", "24", "25", "23", "25", "23", "24", "24");
-       
+                $array_one =array(
+                    "a" => "red",
+                    "b" => "white",
+                    "c" => "blue",
+                    "d" => "yellow"
+                );
+                $array_two =array(
+                    "a" => "red",
+                    "b" => "green",
+                    "c" => "blue"
+                );
+                $array_three =array(
+                    "a" => "red",
+                    "b" => "black",
+                    "f" => "yellow"
+                );
+                $differ = array_diff($array_one, $array_two, $array_three);
+
                 print("<pre>");
-                print_r(array_count_values($age));
+                print_r($differ);
                 print("</pre>");
                 
             ?>
