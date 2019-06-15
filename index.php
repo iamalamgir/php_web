@@ -7,7 +7,7 @@ setcookie('visited', "", time() - 3600);
         
         <br/>
         <hr/>
-        PHP Error Handling
+        PHP Error Handling with Exception
         <span style= "float:right">
             <?php
                 date_default_timezone_set('Asia/Dhaka');
@@ -18,13 +18,36 @@ setcookie('visited', "", time() - 3600);
         <br/>
         
             <?php
-                error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
-                $price = 45;
-                if($price == 45){
-                    echo "The price is $price";
-                }else{
-                    echo "Price is not $price";
+                /*function numCheck($num){
+                    if($num > 1){
+                        throw new Exception("Value must be 1 or bleow");
+                    }
+                    return true;
                 }
+                try{
+                    numCheck(2);
+                    echo "If you see this, the number is 1 or below";
+                }
+
+                catch(Exception $e){
+                    echo "Message: ".$e->getMessage();
+                }*/
+
+                function numCheck($num){
+                    if($num != 5){
+                        throw new Exception("Number is not 5");
+                    }
+                    return true;
+                }
+                try{
+                    numCheck(2);
+                    echo "Yes you have done";
+                }
+
+                catch(Exception $e){
+                    echo "Error: ".$e->getMessage();
+                }
+                
             ?>
 
     </section>        
