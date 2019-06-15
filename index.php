@@ -7,7 +7,7 @@ setcookie('visited', "", time() - 3600);
         
         <br/>
         <hr/>
-        PHP array() Function - array_diff
+        PHP array() Function - array_diff_assoc
         <span style= "float:right">
             <?php
                 date_default_timezone_set('Asia/Dhaka');
@@ -33,12 +33,8 @@ setcookie('visited', "", time() - 3600);
                     "b" => "green",
                     "c" => "blue"
                 );
-                $array_three =array(
-                    "a" => "red",
-                    "b" => "black",
-                    "f" => "yellow"
-                );
-                $differ = array_diff($array_one, $array_two, $array_three);
+                
+                $differ = array_diff_assoc($array_one, $array_two);
 
                 print("<pre>");
                 print_r($differ);
