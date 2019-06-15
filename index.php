@@ -7,7 +7,7 @@ setcookie('visited', "", time() - 3600);
         
         <br/>
         <hr/>
-        PHP Case Change
+        PHP trim:- Strip whitespace (or other characters)
         <span style= "float:right">
             <?php
                 date_default_timezone_set('Asia/Dhaka');
@@ -19,35 +19,30 @@ setcookie('visited', "", time() - 3600);
         
             <?php
                 /*
-               if(isset($_POST['text'])){
-                   $txt = $_POST['text'];
-                   echo $txt;
-               }
-
-               if(isset($_POST['text'])){
+                if(isset($_POST['text'])){
                 global $txt;
                 $txt = $_POST['text'];
-                echo strtoupper($txt);
+                echo trim($txt);
                 }
 
-               if(isset($_POST['text'])){
-                global $txt;
-                $txt = $_POST['text'];
-                echo strtolower($txt);
-            }
-        
-            if(isset($_POST['text'])){
-                global $txt;
-                $txt = $_POST['text'];
-                echo ucfirst($txt);
-            }
-            */
+                if(isset($_POST['text'])){
+                    global $txt;
+                    $txt = $_POST['text'];
+                    echo trim($txt, " .");
+                }
 
-            if(isset($_POST['text'])){
-                global $txt;
-                $txt = $_POST['text'];
-                echo ucwords($txt);
-            }
+                if(isset($_POST['text'])){
+                    global $txt;
+                    $txt = $_POST['text'];
+                    echo ltrim($txt, " .");
+                }
+                */
+
+                if(isset($_POST['text'])){
+                    global $txt;
+                    $txt = $_POST['text'];
+                    echo rtrim($txt, " .");
+                }
             ?>
             <form action="index.php" method="post">
                 <input type="text" name= "text" value="<?php global $txt; echo $txt; ?>"/>
