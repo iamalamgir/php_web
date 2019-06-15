@@ -7,7 +7,7 @@ setcookie('visited', "", time() - 3600);
         
         <br/>
         <hr/>
-        PHP Error Handling with Exception
+        PHP explode() & implode() Function
         <span style= "float:right">
             <?php
                 date_default_timezone_set('Asia/Dhaka');
@@ -18,36 +18,14 @@ setcookie('visited', "", time() - 3600);
         <br/>
         
             <?php
-                /*function numCheck($num){
-                    if($num > 1){
-                        throw new Exception("Value must be 1 or bleow");
-                    }
-                    return true;
-                }
-                try{
-                    numCheck(2);
-                    echo "If you see this, the number is 1 or below";
-                }
-
-                catch(Exception $e){
-                    echo "Message: ".$e->getMessage();
-                }*/
-
-                function numCheck($num){
-                    if($num != 5){
-                        throw new Exception("Number is not 5");
-                    }
-                    return true;
-                }
-                try{
-                    numCheck(2);
-                    echo "Yes you have done";
-                }
-
-                catch(Exception $e){
-                    echo "Error: ".$e->getMessage();
-                }
+                /*
+                $mystr = "We are learning PHP";
+                $str = explode(" ", $mystr);
+                echo $str[3];
+                */
                 
+                $mystr = array("We", "are", "learning", "PHP");
+                echo implode(" ", $mystr);
             ?>
 
     </section>        
