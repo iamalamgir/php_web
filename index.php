@@ -7,7 +7,7 @@ setcookie('visited', "", time() - 3600);
         
         <br/>
         <hr/>
-        PHP array() Function - array_unshift 
+        PHP array() Function - array_values 
         <span style= "float:right">
             <?php
                 date_default_timezone_set('Asia/Dhaka');
@@ -18,38 +18,21 @@ setcookie('visited', "", time() - 3600);
         <br/>
         
             <?php
-                /*
+            
                 $color = array(
                     "a" => "red", 
                     "b" => "blue", 
                     "c" => "orange", 
                     "d" => "skyblue", 
+                    "e" => "blue",
+                    "a" => "red",
+                    "c" => "orange", 
+                    "f" => "yellow"
                 );
-                print("<pre>");
-                print_r($color);
-                print("</pre>");
-                
-                array_unshift($color, "black");
+                $result = array_values($color);
 
                 print("<pre>");
-                print_r($color);
-                print("</pre>");
-                */ 
-                  
-                $color = array(
-                    "0" => "red", 
-                    "1" => "blue", 
-                    "2" => "orange", 
-                    "3" => "skyblue", 
-                );
-                print("<pre>");
-                print_r($color);
-                print("</pre>");
-
-                array_unshift($color, "yellow");
-
-                print("<pre>");
-                print_r($color);
+                print_r($result);
                 print("</pre>");
             
             ?>
