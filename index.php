@@ -7,7 +7,7 @@ setcookie('visited', "", time() - 3600);
         
         <br/>
         <hr/>
-        PHP array() Function - compact 
+        PHP array() Function - current 
         <span style= "float:right">
             <?php
                 date_default_timezone_set('Asia/Dhaka');
@@ -19,15 +19,19 @@ setcookie('visited', "", time() - 3600);
         
             <?php
                
-               $name  = "Alamgir";
-               $dep   = "Accounting";
-               $coder = "PHP";
-
-               $result = compact("name", "dep", "coder");
-
+               $name = array("Siam", "Alamgir", "Mahin", "Imran", "Shakil", "Hasive", "Shahik");
                print("<pre>");
-               print_r($result);
+               print_r($name);
                print("<pre>");
+
+               echo "Current value: ".current($name)."<br>";
+               echo "Next value: ".next($name)."<br>";
+
+               echo "Current value: ".current($name)."<br>";
+               echo "Previous value: ".prev($name)."<br>";
+
+               echo "Last value: ".end($name)."<br>";
+               
             ?>
             
             
