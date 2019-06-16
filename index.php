@@ -7,7 +7,7 @@ setcookie('visited', "", time() - 3600);
         
         <br/>
         <hr/>
-        PHP array() Function - array_search 
+        PHP array() Function - array_shift 
         <span style= "float:right">
             <?php
                 date_default_timezone_set('Asia/Dhaka');
@@ -19,22 +19,37 @@ setcookie('visited', "", time() - 3600);
         
             <?php
                 /*
+                $color_one = array(
+                    "a" => "red", 
+                    "b" => "blue", 
+                    "c" => "orange", 
+                    "d" => "skyblue", 
+                    "e" => "green", 
+                    "f" => "yellow"
+                );
+                array_shift($color_one);
                 
+                print("<pre>");
+                print_r($color_one);
+                print("</pre>");
                 */
 
-                $color_one = array("a"=>"red", "b"=>"blue", "c"=>"orange", "d"=>"skyblue", "e"=>"green", "f"=>"yellow");
-                if(isset($_POST['text'])){
-                    global $text;
-                    $txt = $_POST['text'];
-                    $result = array_search($txt, $color_one);
-                    echo "You have search by => $txt and your key is => $result";
-                }
-               
+                $color_one = array(
+                    "0" => "red", 
+                    "1" => "blue", 
+                    "2" => "orange", 
+                    "3" => "skyblue", 
+                    "4" => "green", 
+                    "5" => "yellow"
+                );
+                array_shift($color_one);
+                
+                print("<pre>");
+                print_r($color_one);
+                print("</pre>");
+                
             ?>
-            <form action="index.php" method="post">
-                <input type="text" name="text" value="<?php global $txt; echo $txt; ?>"/>
-                <input type="submit" name="Submit"/>
-            </form>
+            
             
     </section>        
 <?php include 'footer.php'; ?>
