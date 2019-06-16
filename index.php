@@ -7,7 +7,7 @@ setcookie('visited', "", time() - 3600);
         
         <br/>
         <hr/>
-        PHP array() Function - array_merge
+        PHP array() Function - array_multisort
         <span style= "float:right">
             <?php
                 date_default_timezone_set('Asia/Dhaka');
@@ -19,29 +19,48 @@ setcookie('visited', "", time() - 3600);
         
             <?php
                 /*
-                $arr_one = array("red", "green");
-                $arr_two = array("blue", "yellow");
-
-                $result = array_merge($arr_one, $arr_two);
+                $arr_one = array("Ox", "Dog", "Cat", "Horse", "Bear");
+                array_multisort($arr_one);
                    
                 print("<pre>");
-                print_r($result);
+                print_r($arr_one);
+                print("</pre>");
+
+                $arr_one = array("Ox", "Dog", "Cat", "Horse", "Bear");
+                $arr_two = array("Ant", "Tiger", "Lion", "Fish", "Monkey");
+                array_multisort($arr_one, $arr_two);
+                   
+                print("<pre>");
+                print_r($arr_one);
+                print("</pre>");
+
+                print("<pre>");
+                print_r($arr_two);
+                print("</pre>");
+
+                $arr_one = array("Ox", "Dog", "Cat", "Horse", "Bear");
+                $arr_two = array("Ant", "Tiger", "Lion", "Fish", "Monkey");
+                array_multisort($arr_one, SORT_DESC, $arr_two, SORT_ASC);
+                   
+                print("<pre>");
+                print_r($arr_one);
+                print("</pre>");
+
+                print("<pre>");
+                print_r($arr_two);
                 print("</pre>");
                 */
 
-                $arr_one = array(
-                    "a" => "red", 
-                    "b" => "green"
-                );
-                $arr_two = array(
-                    "c" => "blue", 
-                    "b" => "yellow"
-                );
-
-                $result = array_merge($arr_one, $arr_two);
+                $arr_one = array("Ox", "Dog", "Cat", "Horse", "Bear");
+                $arr_two = array("Ant", "Tiger", "Lion", "Fish", "Monkey");
+                array_multisort($arr_one, SORT_ASC, $arr_two);
                    
                 print("<pre>");
-                print_r($result);
+                print_r($arr_one);
+                print("</pre>");
+
+                print("<pre>");
+                print_r($arr_two);
                 print("</pre>");
                 
             ?>
