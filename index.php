@@ -7,7 +7,7 @@ setcookie('visited', "", time() - 3600);
         
         <br/>
         <hr/>
-        PHP array() Function - array_walk 
+        PHP array() Function - arsort & asort 
         <span style= "float:right">
             <?php
                 date_default_timezone_set('Asia/Dhaka');
@@ -18,16 +18,29 @@ setcookie('visited', "", time() - 3600);
         <br/>
         
             <?php
-                function myfunction($department, $name){
-                    echo "$name come from $department department <br>";
-                }
-            
-                $name = array(
+                /*
+                $num = array(
                     "Alamgir" => "Accounting", 
                     "Siam"    => "Maths", 
-                    "Hasive"  => "Physics"
+                    "Hasive"  => "Physics",
+                    "Imran"   => "English"
                 );
-                array_walk($name, "myfunction");
+                arsort($num);
+                foreach($num as $name=>$department){
+                    echo "Name: ".$name.". Department: ".$department."<br>";
+                }
+                */
+
+                $num = array(
+                    "Alamgir" => "Accounting", 
+                    "Siam"    => "Maths", 
+                    "Hasive"  => "Physics",
+                    "Imran"   => "English"
+                );
+                asort($num);
+                foreach($num as $name=>$department){
+                    echo "Name: ".$name.". Department: ".$department."<br>";
+                }
                
             ?>
             
