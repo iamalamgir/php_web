@@ -7,7 +7,7 @@ setcookie('visited', "", time() - 3600);
         
         <br/>
         <hr/>
-        PHP array() Function - array_key_exists
+        PHP array() Function - array_keys
         <span style= "float:right">
             <?php
                 date_default_timezone_set('Asia/Dhaka');
@@ -19,27 +19,28 @@ setcookie('visited', "", time() - 3600);
         
             <?php
                 /*
-                $arr = array(
-                    "name" => "Alamgir",
-                    "age" => "23"
+                $car = array(
+                    "Volvo"  => "xc90",
+                    "BMW"    => "x5",
+                    "Toyota" => "Highlander"
                 );
-                if(array_key_exists("name", $arr)){
-                    echo "Key already exists";
-                }else{
-                    echo "Key does not exists";
-                }
+                $result = array_keys($car);
+
+                print("<pre>");
+                print_r($result);
+                print("</pre>");
                 */
 
-                $arr = array("name", "age");
-                if(array_key_exists("2", $arr)){
-                    echo "Key already exists";
-                }else{
-                    echo "Key does not exists";
-                }
+                $car = array(
+                    "Volvo"  => "xc90",
+                    "BMW"    => "x5",
+                    "Toyota" => "Highlander"
+                );
+                $result = array_keys($car, "x5");
 
-                /*print("<pre>");
+                print("<pre>");
                 print_r($result);
-                print("</pre>");*/
+                print("</pre>");
                 
             ?>
             
