@@ -7,7 +7,7 @@ setcookie('visited', "", time() - 3600);
         
         <br/>
         <hr/>
-        PHP array() Function - array_intersect_key
+        PHP array() Function - array_key_exists
         <span style= "float:right">
             <?php
                 date_default_timezone_set('Asia/Dhaka');
@@ -19,32 +19,27 @@ setcookie('visited', "", time() - 3600);
         
             <?php
                 /*
-                
+                $arr = array(
+                    "name" => "Alamgir",
+                    "age" => "23"
+                );
+                if(array_key_exists("name", $arr)){
+                    echo "Key already exists";
+                }else{
+                    echo "Key does not exists";
+                }
                 */
 
-                $array_one =array(
-                    "a" => "red",
-                    "b" => "white",
-                    "c" => "blue",
-                    "d" => "yellow"
-                );
-                $array_two =array(
-                    "a" => "red",
-                    "c" => "blue",
-                    "d" => "black"
-                );
-                $array_three =array(
-                    "a" => "red",
-                    "d" => "green",
-                    "c" => "blue"
-                );
-                
-                
-                $result = array_intersect_key($array_one, $array_two, $array_three);
+                $arr = array("name", "age");
+                if(array_key_exists("2", $arr)){
+                    echo "Key already exists";
+                }else{
+                    echo "Key does not exists";
+                }
 
-                print("<pre>");
+                /*print("<pre>");
                 print_r($result);
-                print("</pre>");
+                print("</pre>");*/
                 
             ?>
             
