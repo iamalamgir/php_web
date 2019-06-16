@@ -7,7 +7,7 @@ setcookie('visited', "", time() - 3600);
         
         <br/>
         <hr/>
-        PHP array() Function - array_reverse
+        PHP array() Function - array_search 
         <span style= "float:right">
             <?php
                 date_default_timezone_set('Asia/Dhaka');
@@ -19,38 +19,22 @@ setcookie('visited', "", time() - 3600);
         
             <?php
                 /*
-                $color_one = array("red", "blue", "orange", "skyblue", "green", "yellow");
-                $result = array_reverse($color_one);
-
-                print("<pre>");
-                print_r($result);
-                print("</pre>");
-
-                $color_one = array("red", "blue", "orange", "skyblue", "green", "yellow");
-                $result = array_reverse($color_one);
-
-                print("<pre>");
-                print_r($color_one);
-                print("</pre>");
-
-                print("<pre>");
-                print_r($result);
-                print("</pre>");
+                
                 */
 
                 $color_one = array("a"=>"red", "b"=>"blue", "c"=>"orange", "d"=>"skyblue", "e"=>"green", "f"=>"yellow");
-                $result = array_reverse($color_one, true);
-
-                print("<pre>");
-                print_r($color_one);
-                print("</pre>");
-
-                print("<pre>");
-                print_r($result);
-                print("</pre>");
-                
-                
+                if(isset($_POST['text'])){
+                    global $text;
+                    $txt = $_POST['text'];
+                    $result = array_search($txt, $color_one);
+                    echo "You have search by => $txt and your key is => $result";
+                }
+               
             ?>
+            <form action="index.php" method="post">
+                <input type="text" name="text" value="<?php global $txt; echo $txt; ?>"/>
+                <input type="submit" name="Submit"/>
+            </form>
             
     </section>        
 <?php include 'footer.php'; ?>
