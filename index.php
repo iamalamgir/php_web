@@ -7,7 +7,7 @@ setcookie('visited', "", time() - 3600);
         
         <br/>
         <hr/>
-        PHP array() Function - array_product
+        PHP array() Function - array_replace
         <span style= "float:right">
             <?php
                 date_default_timezone_set('Asia/Dhaka');
@@ -19,12 +19,31 @@ setcookie('visited', "", time() - 3600);
         
             <?php
                 /*
-                $arr = array(5, 5);
-                echo array_product($arr);
+                $color_one = array("red", "blue");
+                $color_tow = array("green", "yellow");
+                $result = array_replace($color_one, $color_tow);
+
+                print("<pre>");
+                print_r($result);
+                print("</pre>");
+
+                $color_one = array("a"=>"red", "b"=>"blue");
+                $color_tow = array("a"=>"green", "yellow");
+                $result = array_replace($color_one, $color_tow);
+
+                print("<pre>");
+                print_r($result);
+                print("</pre>");
                 */
 
-                $arr = array(5, 5, 4, 10);
-                echo array_product($arr);
+                $color_one = array("red", "blue");
+                $color_tow = array("green", "yellow");
+                $color_three = array("orange", "skyblue");
+                $result = array_replace($color_one, $color_tow, $color_three);
+
+                print("<pre>");
+                print_r($result);
+                print("</pre>");
                 
                 
             ?>
