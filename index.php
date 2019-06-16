@@ -7,7 +7,7 @@ setcookie('visited', "", time() - 3600);
         
         <br/>
         <hr/>
-        PHP array() Function - array_map
+        PHP array() Function - array_merge
         <span style= "float:right">
             <?php
                 date_default_timezone_set('Asia/Dhaka');
@@ -19,41 +19,27 @@ setcookie('visited', "", time() - 3600);
         
             <?php
                 /*
-                function myfunction($value){
-                    return($value + $value);
-                }
-                $arr = array(1, 2, 3, 4, 5);
-                $result = array_map(myfunction, $arr);
+                $arr_one = array("red", "green");
+                $arr_two = array("blue", "yellow");
 
-                print("<pre>");
-                print_r($result);
-                print("</pre>");
-
-                function myfunction($value){
-                    $v = strtoupper($value);
-                    return $v;
-                }
-                $arr = array(
-                    "Animal" => "cow",
-                    "Type"   => "mammal"
-                );
-                $result = array_map("myfunction", $arr);
-
+                $result = array_merge($arr_one, $arr_two);
+                   
                 print("<pre>");
                 print_r($result);
                 print("</pre>");
                 */
 
-                function myfunction($value){
-                    $v = strtolower($value);
-                    return $v;
-                }
-                $arr = array(
-                    "Animal" => "COW",
-                    "Type"   => "MAMMAL"
+                $arr_one = array(
+                    "a" => "red", 
+                    "b" => "green"
                 );
-                $result = array_map("myfunction", $arr);
+                $arr_two = array(
+                    "c" => "blue", 
+                    "b" => "yellow"
+                );
 
+                $result = array_merge($arr_one, $arr_two);
+                   
                 print("<pre>");
                 print_r($result);
                 print("</pre>");
