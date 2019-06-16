@@ -7,7 +7,7 @@ setcookie('visited', "", time() - 3600);
         
         <br/>
         <hr/>
-        PHP array() Function - in_array 
+        PHP array() Function - key(), krsort(), ksort() 
         <span style= "float:right">
             <?php
                 date_default_timezone_set('Asia/Dhaka');
@@ -18,22 +18,39 @@ setcookie('visited', "", time() - 3600);
         <br/>
         
             <?php
-               
+               /*
                $coder = array("Siam", "Alamgir", "Mahin", "Imran", "Shakil", "Hasive", "Shahik");
-               if(isset($_POST['username'])){
-                   $text = $_POST['username'];
+               echo "The current position key is: ".key($coder);
 
-                   if(in_array($text, $coder)){
-                       echo "$text Exist.";
-                   }else{
-                    echo "$text Not Exist !!";
-                   }
-               }
+                $coder = array(
+                   "Siam"    => "24", 
+                   "Alamgir" => "23", 
+                   "Mahin"   => "24", 
+                   "Imran"   => "26", 
+                   "Shakil"  => "25", 
+                   "Hasive"  => "27", 
+                   "Shahik"  => "28"
+                );
+                krsort($coder);
+                foreach($coder as $key=>$value){
+                   echo "Name: ".$key.", Age: ".$value."<br>"; 
+                }
+               */
+               $coder = array(
+                   "Siam"    => "24", 
+                   "Alamgir" => "23", 
+                   "Mahin"   => "24", 
+                   "Imran"   => "26", 
+                   "Shakil"  => "25", 
+                   "Hasive"  => "27", 
+                   "Shahik"  => "28"
+                );
+                ksort($coder);
+                foreach($coder as $key=>$value){
+                   echo "Name: ".$key.", Age: ".$value."<br>"; 
+                }
             ?>
-            <form action="index.php" method="post">
-               <input type="text" name="username"/>
-               <input type="submit" value="Submit"/>
-            </form>
+           
             
     </section>        
 <?php include 'footer.php'; ?>
