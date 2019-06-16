@@ -7,7 +7,7 @@ setcookie('visited', "", time() - 3600);
         
         <br/>
         <hr/>
-        PHP array() Function - array_pad
+        PHP array() Function - array_pop & array_push
         <span style= "float:right">
             <?php
                 date_default_timezone_set('Asia/Dhaka');
@@ -19,19 +19,26 @@ setcookie('visited', "", time() - 3600);
         
             <?php
                 /*
-               $arr = array("red", "green");
-                $result = array_pad($arr, 5, "blue");
+                $arr = array("red", "green", "blue", "skyblue");
+                array_pop($arr);
 
                 print("<pre>");
-                print_r($result);
+                print_r($arr);
+                print("</pre>");
+
+                $arr = array("red", "green", "blue");
+                array_push($arr, "skyblue", "yellow", "black");
+
+                print("<pre>");
+                print_r($arr);
                 print("</pre>");
                 */
 
-                $arr = array("red", "green");
-                $result = array_pad($arr, -5, "blue");
+                $arr = array("a"=>"red", "b"=>"green", "c"=>"blue");
+                array_push($arr, "skyblue", "yellow", "black");
 
                 print("<pre>");
-                print_r($result);
+                print_r($arr);
                 print("</pre>");
                 
             ?>
