@@ -7,7 +7,7 @@ setcookie('visited', "", time() - 3600);
         
         <br/>
         <hr/>
-        PHP array() Function - array_values 
+        PHP array() Function - array_walk 
         <span style= "float:right">
             <?php
                 date_default_timezone_set('Asia/Dhaka');
@@ -18,23 +18,17 @@ setcookie('visited', "", time() - 3600);
         <br/>
         
             <?php
+                function myfunction($department, $name){
+                    echo "$name come from $department department <br>";
+                }
             
-                $color = array(
-                    "a" => "red", 
-                    "b" => "blue", 
-                    "c" => "orange", 
-                    "d" => "skyblue", 
-                    "e" => "blue",
-                    "a" => "red",
-                    "c" => "orange", 
-                    "f" => "yellow"
+                $name = array(
+                    "Alamgir" => "Accounting", 
+                    "Siam"    => "Maths", 
+                    "Hasive"  => "Physics"
                 );
-                $result = array_values($color);
-
-                print("<pre>");
-                print_r($result);
-                print("</pre>");
-            
+                array_walk($name, "myfunction");
+               
             ?>
             
             
