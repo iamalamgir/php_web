@@ -7,7 +7,7 @@ setcookie('visited', "", time() - 3600);
         
         <br/>
         <hr/>
-        PHP array() Function - current 
+        PHP array() Function - in_array 
         <span style= "float:right">
             <?php
                 date_default_timezone_set('Asia/Dhaka');
@@ -19,21 +19,21 @@ setcookie('visited', "", time() - 3600);
         
             <?php
                
-               $name = array("Siam", "Alamgir", "Mahin", "Imran", "Shakil", "Hasive", "Shahik");
-               print("<pre>");
-               print_r($name);
-               print("<pre>");
+               $coder = array("Siam", "Alamgir", "Mahin", "Imran", "Shakil", "Hasive", "Shahik");
+               if(isset($_POST['username'])){
+                   $text = $_POST['username'];
 
-               echo "Current value: ".current($name)."<br>";
-               echo "Next value: ".next($name)."<br>";
-
-               echo "Current value: ".current($name)."<br>";
-               echo "Previous value: ".prev($name)."<br>";
-
-               echo "Last value: ".end($name)."<br>";
-               
+                   if(in_array($text, $coder)){
+                       echo "$text Exist.";
+                   }else{
+                    echo "$text Not Exist !!";
+                   }
+               }
             ?>
-            
+            <form action="index.php" method="post">
+               <input type="text" name="username"/>
+               <input type="submit" value="Submit"/>
+            </form>
             
     </section>        
 <?php include 'footer.php'; ?>
