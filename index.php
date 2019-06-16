@@ -7,7 +7,7 @@ setcookie('visited', "", time() - 3600);
         
         <br/>
         <hr/>
-        PHP array() Function - array_shift 
+        PHP array() Function - array_slice 
         <span style= "float:right">
             <?php
                 date_default_timezone_set('Asia/Dhaka');
@@ -19,33 +19,26 @@ setcookie('visited', "", time() - 3600);
         
             <?php
                 /*
-                $color_one = array(
-                    "a" => "red", 
-                    "b" => "blue", 
-                    "c" => "orange", 
-                    "d" => "skyblue", 
-                    "e" => "green", 
-                    "f" => "yellow"
-                );
-                array_shift($color_one);
+                $color_one = array("red", "blue", "orange", "skyblue", "green", "yellow");
+                $result = array_slice($color_one, 1);
                 
                 print("<pre>");
-                print_r($color_one);
+                print_r($result);
+                print("</pre>");
+
+                $color_one = array("red", "blue", "orange", "skyblue", "green", "yellow");
+                $result = array_slice($color_one, 1, 4);
+                
+                print("<pre>");
+                print_r($result);
                 print("</pre>");
                 */
 
-                $color_one = array(
-                    "0" => "red", 
-                    "1" => "blue", 
-                    "2" => "orange", 
-                    "3" => "skyblue", 
-                    "4" => "green", 
-                    "5" => "yellow"
-                );
-                array_shift($color_one);
+                $color_one = array("red", "blue", "orange", "skyblue", "green", "yellow");
+                $result = array_slice($color_one, -5, 3);
                 
                 print("<pre>");
-                print_r($color_one);
+                print_r($result);
                 print("</pre>");
                 
             ?>
