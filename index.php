@@ -7,7 +7,7 @@ setcookie('visited', "", time() - 3600);
         
         <br/>
         <hr/>
-        PHP array() Function - array_keys
+        PHP array() Function - array_map
         <span style= "float:right">
             <?php
                 date_default_timezone_set('Asia/Dhaka');
@@ -19,24 +19,40 @@ setcookie('visited', "", time() - 3600);
         
             <?php
                 /*
-                $car = array(
-                    "Volvo"  => "xc90",
-                    "BMW"    => "x5",
-                    "Toyota" => "Highlander"
+                function myfunction($value){
+                    return($value + $value);
+                }
+                $arr = array(1, 2, 3, 4, 5);
+                $result = array_map(myfunction, $arr);
+
+                print("<pre>");
+                print_r($result);
+                print("</pre>");
+
+                function myfunction($value){
+                    $v = strtoupper($value);
+                    return $v;
+                }
+                $arr = array(
+                    "Animal" => "cow",
+                    "Type"   => "mammal"
                 );
-                $result = array_keys($car);
+                $result = array_map("myfunction", $arr);
 
                 print("<pre>");
                 print_r($result);
                 print("</pre>");
                 */
 
-                $car = array(
-                    "Volvo"  => "xc90",
-                    "BMW"    => "x5",
-                    "Toyota" => "Highlander"
+                function myfunction($value){
+                    $v = strtolower($value);
+                    return $v;
+                }
+                $arr = array(
+                    "Animal" => "COW",
+                    "Type"   => "MAMMAL"
                 );
-                $result = array_keys($car, "x5");
+                $result = array_map("myfunction", $arr);
 
                 print("<pre>");
                 print_r($result);
