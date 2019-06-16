@@ -7,7 +7,7 @@ setcookie('visited', "", time() - 3600);
         
         <br/>
         <hr/>
-        PHP array() Function - array_slice 
+        PHP array() Function - array_sum 
         <span style= "float:right">
             <?php
                 date_default_timezone_set('Asia/Dhaka');
@@ -19,28 +19,20 @@ setcookie('visited', "", time() - 3600);
         
             <?php
                 /*
-                $color_one = array("red", "blue", "orange", "skyblue", "green", "yellow");
-                $result = array_slice($color_one, 1);
-                
-                print("<pre>");
-                print_r($result);
-                print("</pre>");
-
-                $color_one = array("red", "blue", "orange", "skyblue", "green", "yellow");
-                $result = array_slice($color_one, 1, 4);
-                
-                print("<pre>");
-                print_r($result);
-                print("</pre>");
+                $sum = array(10, 30, 50);
+                $result = array_sum($sum);
+                echo "Total: ".$result;
                 */
 
-                $color_one = array("red", "blue", "orange", "skyblue", "green", "yellow");
-                $result = array_slice($color_one, -5, 3);
-                
-                print("<pre>");
-                print_r($result);
-                print("</pre>");
-                
+                $sum = array(
+                    "a" => "20", 
+                    "b" => "15", 
+                    "c" => "35", 
+                    "d" => "55"
+                );
+                $result = array_sum($sum);
+                echo "Total: ".$result;
+               
             ?>
             
             
