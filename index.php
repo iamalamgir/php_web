@@ -1,13 +1,16 @@
 <?php include 'header.php'; ?>
 
-<?php
-    if(isset($_POST['submit'])){
-        $coder = $_POST['coder'];
-        echo "You are ".$coder. " Coder";
-    } 
-?>
+<script>
+    function selectOption(){
+        var index = document.myform.coder.selectedIndex;
+        var value = document.myform.coder.options[index].value;
+        var showData = "You are "+value+" Coder.";
+        document.getElementById('output').innerHTML = showData;
+    }
+</script>
 
-<form action="" method="post" name="myform" id="myform">
+<div id="output"></div>
+<form action="" method="post" name="myform" id="myform" onsubmit="selectOption(); return false;">
     <table>
         <tr> 
             <td>Language: </td> 

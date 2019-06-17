@@ -34,7 +34,7 @@
         <section class="maincontent">
         <br/>
         <hr/>
-        Get selected option value in PHP
+        Get selected option value in JavaScript
         <span style= "float:right">
             <?php
                 date_default_timezone_set('Asia/Dhaka');
