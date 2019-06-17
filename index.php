@@ -1,20 +1,30 @@
 <?php include 'header.php'; ?>
 
-<script>
-function formFunction(){
-    var name = document.myform.username.value;
-    var showData = "Username : "+name;
-    document.getElementById('output').innerHTML = showData;
-}
-</script>
+<?php
+    if(isset($_POST['gender'])){
+        $gen = $_POST['gender'];
+        //echo $gen;
+        
+        if($gen == "Male"){
+            echo "You are a Male";
+        }elseif($gen == "Female"){
+            echo "You are a Female";
+        }else{
+            echo "Others";
+        }
+    }
+?>
 
-<div id="output"></div>
-
-<form action="" method="" name="myform" id="myform" onsubmit="formFunction(); return false;">
+<form action="" method="post" name="myform" id="myform">
     <table>
         <tr> 
-            <td>Username: </td>
-            <td><input type="text" name="username" required="1"/></td>
+            <td>Gender: </td>
+            <td>
+            <input type="radio" name="gender" value="Male"/>Male
+            <input type="radio" name="gender" value="Female"/>Female
+            <input type="radio" name="gender" value="Others"/>Others
+            </td>
+            </td>
         </tr>
         <tr>
             <td></td>
