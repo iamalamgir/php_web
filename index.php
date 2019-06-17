@@ -1,30 +1,27 @@
 <?php include 'header.php'; ?>
 
-<script>
-    function multiCheck(){
-        var length = document.myform.coder.length;
-        var $result = "";
-        for(i = 0; i < length; i++){
-            var checkVal = document.myform.coder[i].checked;
-            if(checkVal){
-                $result += document.myform.coder[i].value + ", ";
-            }
-        }
-        var showData = "You selected : "+$result;
-        document.getElementById('output').innerHTML = showData;
-    }
-</script>
+<?php
+    if(isset($_POST['submit'])){
+        $coder = $_POST['coder'];
+        echo "You are ".$coder. " Coder";
+    } 
+?>
 
-<div id="output"></div>
-<form action="" method="post" name="myform" id="myform" onsubmit="multiCheck(); return false;">
+<form action="" method="post" name="myform" id="myform">
     <table>
         <tr> 
             <td>Language: </td> 
             <td>
-            <input type="checkbox" name="coder" value="PHP"/>PHP
-            <input type="checkbox" name="coder" value="JAVA"/>JAVA
-            <input type="checkbox" name="coder" value="C#"/>C#
-            </td>
+                <select name="coder">
+                    <option>Select One</option>
+                    <option value="JAVA">JAVA</option>
+                    <option value="PHP">PHP</option>
+                    <option value="C#">C#</option>
+                    <option value="C++">C++</option>
+                    <option value="HTML">HTML</option>
+                    <option value="C">C</option>
+                    <option value="CSS">CSS</option>
+                </select>
             </td>
         </tr>
         <tr>
@@ -36,7 +33,5 @@
         </tr>
     </table>
 </form> 
-     
-           
-            
+              
 <?php include 'footer.php'; ?>
