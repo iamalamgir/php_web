@@ -1,35 +1,32 @@
 <?php include 'header.php'; ?>
 
-<script>
-    function clickHere(){
-        var genderleng = document.myform.gender.length;
-        for(i = 0; i < genderleng; i++){
-            var checkValue = document.myform.gender[i].checked;
-            if(checkValue){
-                var checkResult = document.myform.gender.value;
-            }
+<?php
+    if(isset($_POST['submit'])){
+        $coder = $_POST['coder'];
+        //echo $coder;
+        echo "You have selected : ";
+        foreach($coder as $lang=>$value){
+            echo $value.", ";
         }
-        var showData = "Your Gender is : "+checkResult;
-        document.getElementById('output').innerHTML = showData;
     }
-</script>
+?>
 
-<div id="output"></div>
-<form action="" method="post" name="myform" id="myform" onsubmit="clickHere(); return false;">
+
+<form action="" method="post" name="myform" id="myform">
     <table>
         <tr> 
-            <td>Gender: </td> 
+            <td>Language: </td> 
             <td>
-            <input type="radio" name="gender" value="Male"/>Male
-            <input type="radio" name="gender" value="Female"/>Female
-            <input type="radio" name="gender" value="Others"/>Others
+            <input type="checkbox" name="coder[]" value="PHP"/>PHP
+            <input type="checkbox" name="coder[]" value="JAVA"/>JAVA
+            <input type="checkbox" name="coder[]" value="C#"/>C#
             </td>
             </td>
         </tr>
         <tr>
             <td></td>
             <td>
-            <input type="submit" value="Submit"/>
+            <input type="submit" name="submit" value="Submit"/>
             <input type="reset" value="Clear"/>
             </td>
         </tr>
