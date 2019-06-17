@@ -43,7 +43,7 @@
         <section class="maincontent">
         <br/>
         <hr/>
-        Get data from a data table in JavaScript
+        Get data from a data table in PHP
         <span style= "float:right">
             <?php
                 date_default_timezone_set('Asia/Dhaka');

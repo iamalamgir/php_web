@@ -1,34 +1,13 @@
 <?php include 'header.php'; ?>
 
-<script>
-    function clickHere(){
-        var getname = document.myform.name.value;
-        document.getElementById('showName').innerHTML = getname;
-
-        var genderLength = document.myform.gender.length;
-        for(i = 0; i < genderLength; i++){
-            var checkGender = document.myform.gender[i].checked;
-            if(checkGender){
-                genderValue = document.myform.gender[i].value;
-            }
-        }
-        document.getElementById('showGender').innerHTML = genderValue;
-
-        var depLength = document.myform.dep.length;
-        for(i = 0; i < depLength; i++){
-            var checkDep = document.myform.dep[i].checked;
-            if(checkDep){
-                depValue = document.myform.dep[i].value;
-            }
-        }
-        document.getElementById('showDep').innerHTML = depValue;
-
-        var index = document.myform.coder.selectedIndex;
-        var coderValue = document.myform.coder.options[index].value;
-        document.getElementById('showCoder').innerHTML = coderValue;
-
-    }
-</script>
+<?php
+    if(isset($_POST['submit'])){
+        $name   = $_POST['name'];
+        $gender = $_POST['gender'];
+        $dep    = $_POST['dep'];
+        $coder  = $_POST['coder'];
+    
+?>
 
 <table class="tblone">
     <tr>
@@ -36,23 +15,38 @@
     </tr>
     <tr>
         <td>Name</td>
-        <td><span id="showName"></span></td>
+        <td><?php echo $name; ?></td>
     </tr>
     <tr>
         <td>Gender</td>
-        <td><span id="showGender"></span></td>
+            <?php
+                if($gender == "Male"){ ?>
+                    <td><?php echo "Male" ?></td>
+                <?php } elseif($gender == "Female"){ ?>
+                    <td><?php echo "Female" ?></td>
+                <?php } ?>
     </tr>
     <tr>
         <td>Department</td>
-        <td><span id="showDep"></span></td>
+            <?php
+                if($dep == "CSE"){ ?>
+                    <td><?php echo "CSE" ?></td>
+                <?php } elseif($dep == "Physics"){ ?>
+                    <td><?php echo "Physics" ?></td>
+                <?php } elseif($dep == "Maths"){ ?>
+                    <td><?php echo "Maths" ?></td>
+                <?php } elseif($dep == "Accounting"){ ?>
+                    <td><?php echo "Accounting" ?></td>
+                <?php } ?>
     </tr>
     <tr>
         <td>Coder</td>
-        <td><span id="showCoder"></span></td>
+        <td><?php echo $coder; ?></td>
     </tr>
 </table>
+<?php } ?>
 
-<form action="" name="myform" id="myform" onsubmit="clickHere(); return false;">
+<form action="" method="post" name="myform" id="myform">
     <table>
         <tr> 
             <td>Name</td> 
