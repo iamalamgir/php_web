@@ -1,36 +1,27 @@
-<?php 
-session_start();
-include 'header.php'; 
-setcookie('visited', "", time() - 3600);
+<?php include 'header.php'; ?>
+
+<?php
+    if(isset($_POST['username'])){
+        $name = $_POST['username'];
+        echo "Username is: ".$name;
+    }
 ?>
-    <section class="maincontent">
-        
-        <br/>
-        <hr/>
-        PHP array() Function - shuffle 
-        <span style= "float:right">
-            <?php
-                date_default_timezone_set('Asia/Dhaka');
-                echo "Time : ".date("h:i:sa")."<br/>";
-            ?>
-        </span>
-        <hr/>
-        <br/>
-        
-            <?php
-              
-               $name = array("Siam", "Alamgir", "Mahin", "Imran", "Shakil", "Hasive", "Shahik");
-                print"<pre>";
-                print_r($name);
-                print"</pre>";
 
-                shuffle($name);
-
-                print"<pre>";
-                print_r($name);
-                print"</pre>";
-            ?>
-           
+<form action="" method="post" name="myform" id="myform">
+    <table>
+        <tr> 
+            <td>Username: </td>
+            <td><input type="text" name="username" required="1"/></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+            <input type="submit" value="Submit"/>
+            <input type="reset" value="Clear"/>
+            </td>
+        </tr>
+    </table>
+</form>      
             
-    </section>        
+            
 <?php include 'footer.php'; ?>

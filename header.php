@@ -31,3 +31,14 @@
         <section class="headeroption">
             <h2><?php echo"PHP Fundamentals Training"; ?></h2>
         </section>
+        <section class="maincontent">
+        <br/>
+        <hr/>
+        Get Value From a Text Box in PHP
+        <span style= "float:right">
+            <?php
+                date_default_timezone_set('Asia/Dhaka');
+                echo "Time : ".date("h:i:sa")."<br/>";
+            ?>
+        </span>
+        <hr/>
