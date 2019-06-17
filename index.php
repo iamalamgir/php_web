@@ -1,13 +1,16 @@
 <?php include 'header.php'; ?>
 
-<?php
-    if(isset($_POST['username'])){
-        $name = $_POST['username'];
-        echo "Username is: ".$name;
-    }
-?>
+<script>
+function formFunction(){
+    var name = document.myform.username.value;
+    var showData = "Username : "+name;
+    document.getElementById('output').innerHTML = showData;
+}
+</script>
 
-<form action="" method="post" name="myform" id="myform">
+<div id="output"></div>
+
+<form action="" method="" name="myform" id="myform" onsubmit="formFunction(); return false;">
     <table>
         <tr> 
             <td>Username: </td>
@@ -21,7 +24,8 @@
             </td>
         </tr>
     </table>
-</form>      
-            
+</form> 
+     
+           
             
 <?php include 'footer.php'; ?>
