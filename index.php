@@ -7,7 +7,7 @@ setcookie('visited', "", time() - 3600);
         
         <br/>
         <hr/>
-        PHP array() Function - key(), krsort(), ksort() 
+        PHP array() Function - shuffle 
         <span style= "float:right">
             <?php
                 date_default_timezone_set('Asia/Dhaka');
@@ -18,37 +18,17 @@ setcookie('visited', "", time() - 3600);
         <br/>
         
             <?php
-               /*
-               $coder = array("Siam", "Alamgir", "Mahin", "Imran", "Shakil", "Hasive", "Shahik");
-               echo "The current position key is: ".key($coder);
+              
+               $name = array("Siam", "Alamgir", "Mahin", "Imran", "Shakil", "Hasive", "Shahik");
+                print"<pre>";
+                print_r($name);
+                print"</pre>";
 
-                $coder = array(
-                   "Siam"    => "24", 
-                   "Alamgir" => "23", 
-                   "Mahin"   => "24", 
-                   "Imran"   => "26", 
-                   "Shakil"  => "25", 
-                   "Hasive"  => "27", 
-                   "Shahik"  => "28"
-                );
-                krsort($coder);
-                foreach($coder as $key=>$value){
-                   echo "Name: ".$key.", Age: ".$value."<br>"; 
-                }
-               */
-               $coder = array(
-                   "Siam"    => "24", 
-                   "Alamgir" => "23", 
-                   "Mahin"   => "24", 
-                   "Imran"   => "26", 
-                   "Shakil"  => "25", 
-                   "Hasive"  => "27", 
-                   "Shahik"  => "28"
-                );
-                ksort($coder);
-                foreach($coder as $key=>$value){
-                   echo "Name: ".$key.", Age: ".$value."<br>"; 
-                }
+                shuffle($name);
+
+                print"<pre>";
+                print_r($name);
+                print"</pre>";
             ?>
            
             
