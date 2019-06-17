@@ -1,24 +1,24 @@
 <?php include 'header.php'; ?>
 
-<?php
-    if(isset($_POST['gender'])){
-        $gen = $_POST['gender'];
-        //echo $gen;
-        
-        if($gen == "Male"){
-            echo "You are a Male";
-        }elseif($gen == "Female"){
-            echo "You are a Female";
-        }else{
-            echo "Others";
+<script>
+    function clickHere(){
+        var genderleng = document.myform.gender.length;
+        for(i = 0; i < genderleng; i++){
+            var checkValue = document.myform.gender[i].checked;
+            if(checkValue){
+                var checkResult = document.myform.gender.value;
+            }
         }
+        var showData = "Your Gender is : "+checkResult;
+        document.getElementById('output').innerHTML = showData;
     }
-?>
+</script>
 
-<form action="" method="post" name="myform" id="myform">
+<div id="output"></div>
+<form action="" method="post" name="myform" id="myform" onsubmit="clickHere(); return false;">
     <table>
         <tr> 
-            <td>Gender: </td>
+            <td>Gender: </td> 
             <td>
             <input type="radio" name="gender" value="Male"/>Male
             <input type="radio" name="gender" value="Female"/>Female

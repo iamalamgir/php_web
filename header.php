@@ -34,7 +34,7 @@
         <section class="maincontent">
         <br/>
         <hr/>
-        Get Value From Radio Button in PHP
+        Get Value From Radio Button in JavaScript
         <span style= "float:right">
             <?php
                 date_default_timezone_set('Asia/Dhaka');
